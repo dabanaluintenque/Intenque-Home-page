@@ -1,0 +1,12 @@
+
+body {
+    background-color: whitesmoke;
+    padding: 10%;
+}
+#sections {
+  font-size: 2em;  
+}
+#perfil_picture {
+    width: 10%;
+    padding-left: 85%;
+}
