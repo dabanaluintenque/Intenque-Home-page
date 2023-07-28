@@ -1,0 +1,92 @@
+<htm>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>javaScript Classes</title>
+        <link rel="stylesheet" href="classes.css">
+    </head>
+
+    <body>
+        <h1>javaScript Classes.</h1>
+
+        <b>What are javaScript classes?</b><br>
+        javaScript classes are templates for javaScript Objects.
+        <div>
+            <h2>Class Syntax</h2>
+            <ul>
+                <li>Use the keyword <d>class</d> to create a class.</li>
+                <li>Always add a method named <d>constructor( )</d>.</li>
+            </ul>
+            <p> <b>class</b> ClassNmae {<br>
+                <b>constructor</b>( ){ . . . }<br>
+
+                }
+            </p>
+
+            let myObject = new ClassName( );<br>
+
+
+            <d>Example</d><br>
+            Create a Student class for registration.
+            <h3>Resgistration form for Dabana Intenque Tutorial</h3>
+            <form>
+                <p id="example1"></p>
+                <label>Student fullname:</label>
+                <input type="text" id="id1" placeholder="Ex. Dabana Intenque" size="30"><br><br>
+                <label>Student age:</label>
+                <input type="number" id="id2" placeholder="Ex. 23"><br><br>
+                <input type="button" onclick="toDisplay()" value="click to regist">
+                <input type="reset" value="Reset form">
+
+            </form>
+        </div>
+
+        <div>
+            <h2>The constructor Method</h2>
+            <b>constructor</b> is a special method of a class.<br>
+            <ul>
+                <li>The name has to be constructor</li>
+                <li>it is executed automatically when a new object is created</li>
+                <li>it is used to initialize object properties</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Class Methods</h2>
+            <strong>Steps:</strong>
+            <ol>
+                <li><b>step:</b> use the keyword class to create a class.</li>
+                <li><b>step:</b> Always add a constructor( ) method.</li>
+                <li><b>step:</b> add any number of methods you want.</li>
+            </ol>
+
+            <b>Syntax:</b><br>
+            class ClassName{ <br>
+
+            constructor(parameters){<br>
+
+            }<br>
+
+            method( ) {. . .}<br>
+            method(parameter ){ . . .} <br>
+
+
+            }<br>
+
+
+            <p> <d>Example:</d><br></p>
+            Let's add method admin in the student class:
+            <p><b>Note:</b> <strong> To see the full information fill up the registration form<br>
+            before you click submit button. </strong></p>
+
+            <form>
+                <p id="example2"></p>
+                <input type="button"  onclick="checkMethod()" value="submit">
+                
+            </form>
+
+        </div>
+
+        <script src="classes.js"></script>
+    </body>
+</htm>

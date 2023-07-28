@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sets</title>
+    <link rel="stylesheet" href="sets.css">
+</head>
+
+<body>
+    <h1>Sets</h1>
+    <b>What is a set?</b><br>
+    <d>Set</d> is a collection of unique values. Each value can only occur once in a set.<br>
+
+    <div>
+        <h2>Set Methods</h2>
+        <table>
+            <th>Methods</th>
+            <th>Description</th>
+            <tr>
+                <td>new Set()</td>
+                <td> Creates a new Set</td>
+            </tr>
+            <tr>
+                <td>add()</td>
+                <td>Adds a new element to the Set</td>
+            </tr>
+            <tr>
+                <td>delete()</td>
+                <td>Removes an element from a Set</td>
+            </tr>
+            <tr>
+                <td>has()</td>
+                <td>Returns true if a value exists in the Set</td>
+            </tr>
+            <tr>
+                <td>forEach()</td>
+                <td>Invokes a callback for each element in the Set</td>
+            </tr>
+            
+            <tr>
+                <td>values()</td>
+                <td>Returns an iterator with all the values in a Set</td>
+            </tr>
+             <tr id="bold">
+            <td>Property</td>
+            <td>Description</td>
+            </tr>
+
+            <tr>
+                <td>size</td>
+                <td>Returns the number of elements in a Set</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div>
+        <h2><b>How to Create a Set?</b></h2>
+        There are several ways to create a set in javaScript:
+        <ul>
+           <li>Passing an Array to <d>new Set()</d></li>
+           <li>Create a new set and <d>use add()</d> to add values</li>
+           <li>Create a new Set and <d>use add()</d> to add variables</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Passing an Array to new Set() constructor:</h2>
+        <b>Syntax:</b><br>
+        <strong>
+           const items = new Set([item1, item2, item3, ... , itemN]);
+        </strong>
+        <p><d>Click the button to display the set of Natural numbers { N }.</d></p>
+        
+         <p id="example1"></p>
+         <button onclick="checkSet()">click</button>
+    </div>
+
+    <div>
+        <h2>Create a new set and use add() to add values</h2>
+        <b>Syntax:</b><br>
+        <strong>
+            const items = new Set();<br>
+            items.add(item1);<br>
+            items.add(item2);<br>
+            items.add(item3);<br>
+             .<br>
+             .<br>
+             .<br>
+            items.add(itemN)<br>
+        </strong>
+        <p><d>Add a set of fruits</d></p>
+
+      <form>
+            <p id="example2"></p>
+            <label>add fruits:</label>
+            <input type="text" id="id1" size="8">
+            <input type="text" id="id2" size="8">
+            <input type="text" id="id3" size="8">
+            <input type="text" id="id4" size="8">
+            <input type="text" id="id5" size="8">
+            <input type="button" onclick="checkSetAdd()" value="click">
+            <input type="reset">
+        </form> 
+        <!-- <p id="example2"></p>
+        <button onclick="checkSetAdd()">click</button>-->
+    </div>
+
+    <div>
+        <h2>Create a new Set and use add() to add variables</h2>
+        <b>Syntax:</b><br>
+        <strong>
+        const items = new Set();<br>
+        const item1 ="good morning";<br>
+        const item2 ="good afternoon";<br>
+        const item3 ="good evening";<br>
+
+        items.add(item1);<br>
+        items.add(item2);<br>
+        items.add(item3);<br>
+        </strong>
+        <p><d>Add student to a set of students.</d></p>
+        <form>
+            <p id="example3"></p>
+            <label>add new student:</label>
+            <input type="text" id="id6" size="10">
+            <input type="text" id="id7" size="10">
+            <input type="button" onclick="checkAddVariable()" value="click">
+            <input type="reset">
+
+        </form>
+        
+    </div>
+
+
+    <script src="sets.js"></script>
+</body>
+
+</html>

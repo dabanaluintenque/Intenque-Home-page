@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Conversion</title>
+    <link rel="stylesheet" href="conversion.css">
+
+</head>
+<h1>Conversion</h1>
+
+<div>
+    <h2>How to convert javaScript variables?</h2>
+    JavaScript variables can be converted to a new variable and another data type:<br>
+    <ol>
+        <li>By the use of javaScript function</li>
+        <li>Automatically by JavaScript itself</li>
+    </ol>
+</div>
+
+<div>
+    <h2>Converting string to Numbers</h2>
+    The global method to convert a strings to numbers is <b>Number()</b><br>
+
+    <b>E.g.</b><br>
+    let pi = "3.14"; <br>
+    let text = " ";<br>
+    let empty = "";<br>
+    let space = "77  13";<br>
+    Number(pi);          <d id="out">output =  3.14</d><br>
+    Number(text);        <d id="out">output = 0 </d><br>
+    Number(empty);       <d id="out">output = 0</d><br>
+    Number(space);       <d id="out">output = NAN</d><br>
+</div>
+
+
+  <div>
+      <h2>Number Method</h2>
+
+      <table>
+          <th>Method</th>
+          <th>Description</th>
+
+          <tr>
+              <td><d>Number()</d></td>
+              <td>Returns a number, converted from its argument.</td>
+          </tr>
+          <tr>
+              <td><d>parseFloat()</d></td>
+              <td>Parses a string and returns a floating point number.</td>
+          </tr>
+          <tr>
+              <td><d>parseInt()</d></td>
+              <td>Parses a string and returns an interger</td>
+          </tr>
+      </table>
+  </div>
+
+  <div>
+      <h2>Converting a Number to String</h2>
+      The global method to convert a <d>number</d> to <d>String</d> is <b>String()</b><br>
+      Also, the number method <b>toString()</b> does the same. <br>
+
+      <b>E.g.</b><br>
+      let pi = 3.14;<br>
+      let number = 77;<br>
+      let otherNumber = 13;<br>
+
+      <strong>String(pi);</strong>   <d id="out">output a string of number = 3.14</d> <br>
+      <strong>pi.toString();</strong>  <d id="out">output a string of number = 3.14</d><br>
+      <strong>String(number);</strong> <d id="out">output  a string of number = 77</d><br>
+      <strong>number.toString();</strong> <d id="out"> output a string of number = 77</d><br>
+      <strong>String(othernumber);</strong> <d id="out">output a string of number = 13</d><br>
+      <strong>otherNumber.toString();</strong> <d id="out"> output a string of number = 13</d>
+
+  </div>
+
+  <div>
+      <h2>Convertng Booleans to Number</h2>
+      The global method to convert booleans to a number is <b>Number()</b><br>
+
+      let x = false; <br>
+      let y = true; <br>
+      Number(x);           <d id="out">Output = 0</d><br>
+      Number(y);           <d id="out">Output = 1</d><br>
+      
+  </div>
+
+
+<body>
+
+    <script src="conversion.js"></script>
+</body>
+
+</html>
