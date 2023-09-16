@@ -1,22 +1,17 @@
 
-
-
 function timeTracker(startHour, startMinute, endHour,  endMinute){
     
     let totalHours = endHour - startHour;
     let totalMinutes = 0.0;
     let result = 0.0;
    
-    if (startMinute == endMinute) {
-        
+    if (startMinute == endMinute) { 
         result = (totalHours * 60);
     }
-
     else if (startMinute < endMinute) {
         totalMinutes = endMinute - startMinute;
         result = (totalHours * 60) + totalMinutes;
     }
-
     else{
         totalHours -= 1;
         totalMinutes = (60 - startMinute) + endMinute;
@@ -30,6 +25,7 @@ function convert_to_time_format(timeFormat) {
     const minutes = parseInt(timeFormat % 60);
     return `${hours}h : ${minutes}`;
 }
+
 // Note I enter military hours 
 // Ex: 2Pm = 14 but 2Am = 2
 // or  9PM = 21 but 9Am = 9
@@ -45,6 +41,20 @@ let day9 = timeTracker(23,10,24,10);
 let day10 = timeTracker(14,55,16,4);
 let day11 = timeTracker(13,51,15,30);
 let day12 = timeTracker(10,6, 12,0);
+let day12_5 = timeTracker(15,34,18,30);
+let day13 = timeTracker(15,22,17,0);
+let day14 = timeTracker(14,45,15,45);
+let day15 = timeTracker(20,49,22,0);
+let day16 = timeTracker(10,41,13,41);
+let day17 = timeTracker(18,48,21,0);
+let day18 = timeTracker(19,25,20,0);
+let day19 = timeTracker(4,36,5,36);
+let day20 = timeTracker(18,49,20,55);
+let day21 = timeTracker(19,45,20,15);
+let day22 = timeTracker(4,46,5,17);
+let day23 = timeTracker(21,12,22,55);
+let day24 = timeTracker(14,54,16,30);
+let day25 = timeTracker(7,48,8,37);
 
 let number_of_days =[];
 number_of_days.push(day1);
@@ -58,7 +68,22 @@ number_of_days.push(day8);
 number_of_days.push(day9);
 number_of_days.push(day10);
 number_of_days.push(day11);
-number_of_days.push(day12)
+number_of_days.push(day12);
+number_of_days.push(day12_5);
+number_of_days.push(day13);
+number_of_days.push(day14);
+number_of_days.push(day15);
+number_of_days.push(day16);
+number_of_days.push(day17);
+number_of_days.push(day18);
+number_of_days.push(day19);
+number_of_days.push(day20);
+number_of_days.push(day21);
+number_of_days.push(day22);
+number_of_days.push(day23);
+number_of_days.push(day24);
+number_of_days.push(day25);
+
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
@@ -72,6 +97,21 @@ const day9Time = document.getElementById('day9').innerHTML = convert_to_time_for
 const day10Time = document.getElementById('day10').innerHTML = convert_to_time_format(number_of_days[9]);
 const day11Time = document.getElementById('day11').innerHTML = convert_to_time_format(number_of_days[10]);
 const day12Time = document.getElementById('day12').innerHTML = convert_to_time_format(number_of_days[11]);
+const day12_5Time = document.getElementById('day12.5').innerHTML = convert_to_time_format(number_of_days[12]);
+const day13Time = document.getElementById('day13').innerHTML = convert_to_time_format(number_of_days[13]);
+const day14Time = document.getElementById('day14').innerHTML = convert_to_time_format(number_of_days[14]);
+const day15Time = document.getElementById('day15').innerHTML = convert_to_time_format(number_of_days[15]);
+const day16Time = document.getElementById('day16').innerHTML = convert_to_time_format(number_of_days[16]);
+const day17Time = document.getElementById('day17').innerHTML = convert_to_time_format(number_of_days[17]);
+const day18Time = document.getElementById('day18').innerHTML = convert_to_time_format(number_of_days[18]);
+const day19Time = document.getElementById('day19').innerHTML = convert_to_time_format(number_of_days[19]);
+const day20Time = document.getElementById('day20').innerHTML = convert_to_time_format(number_of_days[20]);
+const day21Time = document.getElementById('day21').innerHTML = convert_to_time_format(number_of_days[21]);
+const day22Time = document.getElementById('day22').innerHTML = convert_to_time_format(number_of_days[22]);
+const day23Time = document.getElementById('day23').innerHTML = convert_to_time_format(number_of_days[23]);
+const day24Time = document.getElementById('day24').innerHTML = convert_to_time_format(number_of_days[24]);
+const day25Time = document.getElementById('day25').innerHTML = convert_to_time_format(number_of_days[25]);
+
 
 
 function totalHoursInStudy(){

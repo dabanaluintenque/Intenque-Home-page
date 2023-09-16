@@ -2,3 +2,11 @@
 
     Link: https://github.com/cs50/libcs50/issues/189
 
+How to print integer, Long, String, and Float in C?
+   
+   1) %i for Integers: printf("%i\n", integer_variable);
+   2) %li for Long:  printf("%li\n", long_variable);
+   3) %f for Float: printf("%f\n", float_variable);
+   4) %s for String: printf("%s\n", string_variable);
+   5) %c for Char: printf("%c\n", char_varibale);
+
