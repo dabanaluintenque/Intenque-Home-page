@@ -60,6 +60,10 @@ let day26 = timeTracker(18,48,22,20);
 let day27 = timeTracker(16,59,17,59);
 let day28 = timeTracker(17,59,20,10);
 let day29 = timeTracker(12,17,15,2);
+let day30 = timeTracker(9,16,15,29);
+let day31 = timeTracker(9,52,14,50);
+let day32 = timeTracker(9,31,13,50);
+
 let number_of_days =[];
 number_of_days.push(day1);
 number_of_days.push(day2);
@@ -92,7 +96,9 @@ number_of_days.push(day26);
 number_of_days.push(day27);
 number_of_days.push(day28);
 number_of_days.push(day29);
-
+number_of_days.push(day30);
+number_of_days.push(day31);
+number_of_days.push(day32);
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
@@ -125,6 +131,9 @@ const day26Time = document.getElementById('day26').innerHTML = convert_to_time_f
 const day27Time = document.getElementById('day27').innerHTML = convert_to_time_format(number_of_days[28]);
 const day28Time = document.getElementById('day28').innerHTML = convert_to_time_format(number_of_days[29]);
 const day29Time = document.getElementById('day29').innerHTML = convert_to_time_format(number_of_days[30]);
+const day30Time = document.getElementById('day30').innerHTML = convert_to_time_format(number_of_days[31]);
+const day31Time = document.getElementById('day31').innerHTML = convert_to_time_format(number_of_days[32]);
+const day32Time = document.getElementById('day32').innerHTML = convert_to_time_format(number_of_days[33]);
 
 
 
