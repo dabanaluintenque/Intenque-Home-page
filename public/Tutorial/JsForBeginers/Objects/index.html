@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset='utf-8'>
+    <title> Js Objects</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <h1> JavaScript Objects</h1>
+
+    <!--<h3>It is a beautiful day to save lives, one brain at a time! </h3>
+    <Jannah>Hi Dabana, It's Jannah. I hope you are having an absolutely fantastic, beautiful and wonderful day. <br>
+    I had an amazing day today and helped a lot of people become stronger and more confident during my kickboxing class. 
+    I am starting to love life more and more each day, especially because I am surrounded by amazing people, like yourself. 
+    You are a blessing that I did not know I needed. I am very thankful and grateful and special to have a partner like you in my life. 
+    I hope the moon smiles back at you by guiding you with the light you chace during your unlit times. The sun shined at me through your eyes, 
+    allowing me to see the beuaty of life through your birght visions. I want to let you know that the stars wish they could reach the places you go, 
+    to shine the way you beam. 
+    I want to tell you the mountains spoke of your strength and stability, hoping they could have a fraction of how grounded you carry yourself to be. 
+    The ocean spoke to me during the night tides, unable to understand the depth of your heart compared to its mysterious waves. 
+    The soil that grew the little seeds of hope into the jasmine tree, used your speech as courage, wisdom and guidance to fertilize its seed. 
+    Dabana, 
+    It seems like you are what my world desires to be. 
+    Your character and personality. 
+    With that in mind, it seems imposible to try and find whats right to gift you, 
+    to show you my love.  
+    But I know, 
+    I can be 
+    your Heaven, 
+    and gift you love 
+    to eternity. 
+
+    -J
+     </Jannah> -->
+
+
+
+    <p>NOTE: comparing two JavaScript objects always returns false.</p>
+
+
+
+
+    <div>
+        <p id="example1">What is an object? (press submit to see answer)</p>
+
+        <button onclick="answer()">submit</button>
+    </div>
+
+    <div>
+        <p> We can create a method inside an object, to display any information.</p>
+
+        <p id="example2"></p>
+
+        <button onclick="getInfo()">submit</button>
+    </div>
+
+    <div>
+        <h2><b>What is this keyword?</b></h2>
+        <section> this refers to an object in JavaScript!</section>
+        <section>It depends on how this is being used or called.</section>
+        <section>IN AN OBJECtT METHOD: this refers to the object. </section>
+        <section>ALONE: this refers to the global object.</section>
+        <section>IN A FUNCTION: this refers to the global object.</section>
+        <section>IN AN EVENT: this refers to the element that received the event.</section>
+
+        <b>Note:</b><br>
+        All JavaScript values, except primitives, are Objects.
+    </div>
+    <div>
+        <h2><b>What is a Primitive Value?</b></h2>
+        <p>
+            <d>A primitive value</d> is a value that has no properties or methods.
+        </p>
+        <b>Example:</b><br>
+        <strong>PI (3.14) is a primitive value.</strong><br>
+
+    </div>
+    <div>
+        <h2><b>What is a primitive data type?</b></h2>
+        <p>
+            <d>A primitive data type</d> is data that has a primitive value.
+        </p>
+        <p>JavaScript defines 7 types of primitive data types</p>
+        <ul>
+            <li>string</li>
+            <li>number</li>
+            <li>boolean</li>
+            <li>null</li>
+            <li>undefined</li>
+            <li>symbol</li>
+            <li>bigint</li>
+        </ul>
+        <b>Note:</b>
+        <p>
+            <d>Objects</d> are variables too. But objects can contain many values.
+        </p>
+        <p><b>Objects values are: </b> written as <d>name: value</d> pairs (name and value separated by a colon).</p>
+        <p><strong>Object is</strong> a collection of named values</p>
+        <p>It is a common practice to <b>declare</b> objects with the <b>const</b> <strong>keyword.</strong></p>
+
+        <p><b>Example:</b></p>
+        <strong>
+            const student = { <br>
+
+            name: <d>'Dabana Intenque',</d> <br>
+            age: <d>23,</d> <br>
+            id: <d>007713,</d><br>
+            fullIdentity: <d>function(){<br>
+                return this.name +" "+ this.age +" "+ this.id;<br>
+
+                } </d> <br>
+            };<br>
+        </strong>
+    </div>
+
+    <div>
+        <h2> <b>What is an Object Methods?</b></h2>
+        <p>
+            <d>An object method</d> is an object property containing a <d>function definition.</d>
+        </p>
+        <p>Methods are <d>actions</d> that can be performed on objets.</p>
+        <p><b>Object properties can be</b> both primitive values, other objects, and functions.</p>
+
+        <b>Example:</b>
+        <table>
+            <th>Property</th>
+            <th>Value</th>
+            <tr>
+                <td>name</td>
+                <td>Dabana Intenque</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>007713</td>
+            </tr>
+            <tr>
+                <td>fullIdentity</td>
+                <td>function(){return this.name +" "+ this.age +" "+ this.id</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>JavaScript Objects are Mutable</h2>
+        <p>They are addressed by reference, not by value</p>
+        <p>If student is an object, the following statement will not create a copy of student</p>
+        <p>
+            <d>const firstStudent</d> = student;
+        </p>
+        <b>Things to keep in mind</b>
+        <p>The object <b>firstStudent</b> is not a <strong>copy</strong> of <strong>student</strong>. It is student.
+            Both firstStudent and student are the same.</p>
+        <p>Any changes to firstStudent will also change student, because firstStudent and student are the same object.
+        </p>
+
+        <b>Example:</b><br>
+        <form>
+            <p id="example3"></p>
+
+            <label>name:</label>
+            <input type="text" id="id1" placeholder="Dabana"><br><br>
+            <label>age:</label>
+            <input type="number" id="id2" placeholder="23"><br><br>
+            <label>Id:</label>
+            <input type="number" id="id3" placeholder="007713"><br><br>
+            <p>
+                <d>Assigning const firstStudent = student</d><br>
+                <strong>firstStudent.name box will override the name.</strong>
+            </p>
+
+            <label>firstStudent.name:</label>
+            <input type="text" id="id4" placeholder="any Name"><br><br>
+            <input type="button" onclick="mutableObject()" value="Click">
+            <input type="reset">
+
+
+        </form>
+
+    </div>
+
+    <div>
+        <h2>Syntax for accessing Accessing Object Properties</h2>
+
+        <p>objectName.property // <d>Ex: student.name</d>
+        </p>
+        or
+        <p>objectName["property"] // <d>Ex: student["name"]</d>
+        </p>
+        or
+        <p>objectName[expression] // <d>Ex: z = "age"; student[z]</d>
+        </p>
+
+    </div>
+
+    <div>
+        <h2> Adding New Properties</h2>
+
+        <p>We can add new properties to an existing object by simply giving it a value</p>
+        <p>Assume that the student object already exists we can then give it new proprertie:
+
+        </p>
+        <b>Syntax:</b><br>
+        student.newProperty = "newValue";<br>
+
+        <b>Example:</b><br>
+
+        <p>
+            <d>Add student email address in the existing student Object:</d>
+        </p>
+
+        <p><strong>To see the full result fill out the field above in the Mutable section.</strong></p>
+
+        <from>
+            <p id="example4"></p>
+
+            <label>email:</label>
+            <input type="eamil" id="id5" placeholder="dintenque@gmail.com"><br><br>
+            <input type="button" onclick="addNewProperty()" value="Add new Proverty">
+            <input type="reset">
+        </from>
+    </div>
+
+    <div>
+        <h2>Deleting Properties</h2>
+        Use <b>delete </b> keyword to delete the property from an object.
+        <p>Assume that the student object already exists we can then delete any property inside of it.</p>
+        <p><b>Syntax:</b></p>
+
+        <strong>delete student.Id;</strong>
+
+
+        <p> <b>Note:</b><br><b>delete</b> keyword deletes both the value of the property and the property itself</p>
+        After, deletion the property cannot be used before it is added back again.
+        <p><b>delete</b> operator is designed to be used on object properties. It has no effect on variables or
+            functions.</p>
+        <p><b>The delete</b> operator should not be used on predefined JavaScript object properties. It can crash your
+            application.</p>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

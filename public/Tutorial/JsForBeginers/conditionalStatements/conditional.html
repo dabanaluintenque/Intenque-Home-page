@@ -1,0 +1,289 @@
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Conditional Statements</title>
+
+    <link rel="stylesheet" href="conditional.css">
+
+</head>
+
+<body>
+
+    <div clasa>
+        <div>
+            <h1>Conditional Statements</h1>
+
+            <p> We use conditional statements often when we write a code</p>
+
+            <div>
+                <h2> Comparison and Logical Operators</h2>
+                We use <b>comparison and logical operator</b> to test for <d>true</d> or <b>false</b><br>
+                <strong>suppose x = 7</strong><br>
+
+                <table>
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                        <th>Comparison</th>
+                        <th>Result</th>
+
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>equal to</td>
+                        <td>
+                            x == 10<br>
+                            x == 7 <br>
+                            x == "7"
+
+
+                        </td>
+                        <td>
+                            false<br>
+                            true<br>
+                            true<br>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>equal value and equal type</td>
+                        <td>
+                            x === 7 <br>
+                            x === "7"
+
+                        </td>
+                        <td>
+                            true<br>
+                            false<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>not equal</td>
+                        <td>
+                            x != 10<br>
+                        </td>
+                        <td>
+                            true<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>!==</td>
+                        <td>not equal value or not equal type</td>
+                        <td>
+                            x !==7 <br>
+                            x !=="7"<br>
+                            x !==10
+                        </td>
+                        <td>
+                            false <br>
+                            true <br>
+                            true
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> &lt;</td>
+                        <td> less than</td>
+                        <td> x &lt; 10</td>
+                        <td> true</td>
+                    </tr>
+                    <tr>
+                        <td> &gt;</td>
+                        <td>greater than</td>
+                        <td> x &gt; 10</td>
+                        <td> false</td>
+                    </tr>
+
+                    <tr>
+                        <td> &lt;=</td>
+                        <td> less than or equal to</td>
+                        <td> x &lt;= 10</td>
+                        <td> true</td>
+                    </tr>
+                    <tr>
+                        <td> &gt;=</td>
+                        <td> greater than or equal to</td>
+                        <td> x &gt;= 10</td>
+                        <td> false</td>
+                    </tr>
+
+
+
+
+                </table>
+            </div>
+
+            <d>Those are the JavaScript conditional Statements:</d> <b>if, else, else if and switch.</b>
+
+        </div>
+
+        <div>
+
+            <ul>
+
+                <li><b>if</b>- is used to specify a block of code to be executed, if a specified condition is true.<br>
+                </li>
+                <li><b>else</b>- is used to specify a block of code to be executed, if the same contional is false.
+                </li>
+                <li><b>else if</b>- is used to specify a new contidion to test, if the first condition is false.</li>
+                <li><b>switch</b>- is used to specify many alternative blocks of code to be executed. </li>
+            </ul>
+        </div>
+
+
+        <div>
+
+            <h2>if Statement</h2>
+            <b>if</b>- is used to specify a block of code to be executed, if a specified condition is true.<br>
+
+            <b>Syntax</b><br>
+            <strong>
+                if (condition){ <br>
+
+                // block of code to be executed if the condition is true <br>
+
+                }
+            </strong>
+            <br>
+
+            <d>Example:</d> say something if study hours is greater than 5.
+
+            <div id="example1"></div>
+            <form>
+
+                <label>enter a number:</label>
+                <input type="number" id="study" name="study" placeholder="enter a number" required autofocus>
+
+                <input type="button" onclick="checkIf()" value="click">
+
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h2> else Statement</h2>
+        We use <b>else statement</b> to specify a block of code to be executed if the given condition is false.<br>
+
+        <b>Syntax:</b><br>
+        <strong>
+            if(condition){<br>
+            // block of code to be executed if the condition is true <br>
+            }<br>
+            else{<br>
+            // block of code to be executed if the condition is false <br>
+            }<br>
+        </strong>
+        <b> What is the value of A in hex decimal?</b>
+        <form>
+            <p id=example3></p>
+            <label>Enter a number:</label>
+            <input type="number" id="id3" placeholder="enter a value">
+            <input type="button" onclick="checkElse()" value="click">
+
+        </form>
+    </div>
+
+    <div>
+        <h2> else if statement</h2>
+
+        We use <b>else if</b> statement to specify a new condition if the first condition is false. <br>
+        <b>Syntax</b><br>
+        <strong>
+            if(condition1){<br>
+            // block of code to be executed if the condition1 is true <br>
+            }<br>
+            else if(condition2){<br>
+            // block of code to be executed if the condition1 is false and condition2 is true <br>
+            }<br>
+            else{<br>
+            // block of code to be executed if both condition1 & 2 are false <br>
+            }<br> </strong>
+
+        <b> What is the value of B or C in Hex decimal?</b>
+
+        <form>
+            <p id="example4"></p>
+            <label> Enter the value of B or C in Hex:</label>
+            <input type="number" id="id4" placeholder="enter a value">
+            <input type="button" onclick="checkElseIf()" value="click">
+        </form>
+    </div>
+
+    <div>
+        <h2>Ternary Operator (?:)</h2>
+        The conditional ternary operator assigns a variable based on some contidaion.<br> 
+
+        <strong>
+            <b>Syntax:</b><br>
+
+            let answer = (condition)? "Do something if condition is true": " else do something if condition is false";<br>
+
+            Example: <br>
+            let answer = (10 &lt; 20)? "10 is less than 20" : "10 is not less than 20"; <br>
+        </strong>
+
+        <form>
+            <p id="example2"></p>
+            <label>Enter number that is divisble by 7:</label>
+            <input type="number" id="id1" placeholder="enter a number" required>
+            <input type="button" onclick="ternaryOperator()" value="click">
+        </form>
+
+    </div>
+
+
+    <div>
+        <h2> Switch Statement</h2>
+        We use <b>switch statement</b> to select one of many code blocks to be executed.<br>
+
+        <b>Syntax:</b><br>
+        <strong>
+            switch(condition){ <br>
+            case x:<br>
+            // code block to be executed<br>
+            break; <br>
+            case y: <br>
+            // code block to be executed<br>
+            break; <br>
+            case z: <br>
+            // code block to be executed<br>
+            break;<br>
+            default: <br>
+            // code block to be executed if none the statement above applies<br>
+            } </strong> <br>
+
+        <b>How switch statement works?</b><br>
+        <ul>
+            <li>The switch expression is evaluated once.</li>
+            <li>The value of the expression is compared with the values of each case.</li>
+            <li>If there is a match, the associated block of code is executed.</li>
+            <li>If there is not match, the default code block is executed.</li>
+        </ul>
+        <b>Note:</b><br>
+        <p> Switch cases use <d>strict</d> comparision(<d>===</d>)<br>
+            The values must be of the same type of match.<br>
+            A <b>strict</b> comparision <d>can only be true</d> if the operands are the same type.
+        </p>
+        Example:<br>
+
+        <b>What day of the week will it be any numbers of day from today?</b> <br>
+
+        <form>
+            <p id="example5"></p>
+            <label>Enter any number of days</label>
+            <input type="number" id="id5" placeholder="enter a number">
+            <input type="button" onclick="checkSwitch()" value="click">
+        </form>
+
+
+
+    </div>
+    <script src="conditional.js"></script>
+</body>
+
+</html>

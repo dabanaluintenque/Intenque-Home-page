@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+        <meta charset="utf-8">
+        <title>CyberSecurity</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        />
+    </head>
+     <body>
+        <div class="container" >
+            <h1 style="text-align: center;">CyberSecurity</h1>
+            <div class="row">
+                <div class="col">
+                    <h3>How to Brute force discover someone password using John the Ripper in Linux?</h3>
+                    <section>
+                        <ol>
+                            <li>
+                                <section>on your terminal navigate to root directory</section>
+                                <section>using this command: sudo su -</section>
+                                <section>If promted for password enter your computer password</section>
+                                <section>
+                                    <img src="./cyber_images/cyber_1.png" alt="access to root"/>
+                                </section>
+
+                            </li>
+                            <li>
+                                <section>on the root create a file where you saved the list of passowrd you will use to attempt brake the computer</section>
+                                <section>
+                                    <img src="./cyber_images/cyber_2.png" alt="txt file">
+                                </section>
+                            </li>
+                            <li>
+                                <section>Run this dictionary.txt file against user computer using john the Ripper 
+                                        Make sure you have john the ripper installed on you computer
+                                </section>
+                                <section>using this command: john --format=crypt dictionary.txt /etc/shadow</section>
+                                <section>If the password exist it will return username and password</section>
+                                <section>
+                                    <img src="./cyber_images/cyber_3.png" alt="john the ripper">
+                                </section>
+
+                            </li>
+
+                        </ol>
+                    </section>
+                </div>
+                <div class="col">
+                    <h2>How to add a new user in windows?</h2>
+                    <section>
+                        <section>
+                            <section>step 1: login as administrator</section>
+                            <section>step 2: righ click in on "start"</section>
+                            <section>step 3: click "Computer Management"</section>
+                            <section>step 4: on the Computer Management panel click "Local Users and Groups"</section>
+                            <section>step 5: right click in "Users"</section>
+                            <section>step 6: select "New User"</section>
+                            <section>step 7: Fill the screen with the new user information.</section>
+                        </section>
+                    </section>
+                    <p></p>
+                    <h2>How to add a new user in Linux using terminal?</h2>
+                    <section>
+                        <section>
+                            <section>step 1: open terminal</section>
+                            <section>step 2: login as root in terminal using this command "sudo su -"</section>
+                            <section>step 3: enter your root password</section>
+                            <section>step 4: type "sudo adduser username" 
+                                <small>Note: change the username by the name of the user you want to add.
+                                     Also make sure you start username with a lower case letter.
+                                </small>
+                            </section>
+                            <section>Fill out the question</section>
+                        </section>
+                    </section>
+                    <div>
+                        <h2>How to disable an administrator account when a adim leave a company?</h2>
+                        <section>
+                            <ol>
+                                <li>
+                                    <section>Use the windows Server 2016/2019 CMD tool to disable the user account</section>
+                                    <section>"C:\Users\Administrator >net user username/active: no"</section>
+                                </li>
+                                <li>
+                                    <section>Use the Windows Server 2016/2019 CMD too to change the Administrator password for the file server(s).</section>
+                                    <section>"C:\Users\Administrator> net user administrator newPassword</section>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1>A number of network appliances are involved in provisioning a network architecture:</h1>
+                    <img src="./cyber_images/internet_layers.png" alt="network appliances image">
+                </div>
+                <div class="row">
+                    <h2 style="text-align: center;">List of words used in cyberSecurity and meanings</h2>
+                    <div class="col">
+                        <ol>
+                            <li><h3>CA: <small>Certificate Authority</small></h3></li>
+                            <li><h3>PKI: <small>Public Key Infrastructure</small></h3></li>
+                            <li><h3>TPM: <small>Trusted Platform Module</small></h3></li>
+                            <li><h3>IdP: <small>Identity Provider</small></h3></li>
+                            <li><h3>IAM: <small>Identity Access Management</small></h3></li>
+                            <li><h3>NDA: <small>Nondisclosure Agreement</small></h3></li>
+                            <li><h3>SOPs: <small>Standard Operating Procedures</small></h3></li>
+                            <li><h3>ACL: <small>Access Control List</small></h3></li>
+                            <li><h3>MFA: <small>Multifactor Authentication</small></h3></li>
+                            <li><h3>SSH: <small>Secure Shell</small></h3></li>
+                            <li><h3>API: <small>Application Programming Interface</small></h3></li>
+                            <li><h3>SID:  <small>security identifier</small></h3></li>
+                            <li><h3>GPOs: <small>Group Policy Objects</small></h3></li>
+                            <li><h3>UN: <small>Organizational Units</small></h3></li>
+                            <li><h3>AD: <small>Active Directory</small></h3></li>
+                            <li><h3>ISP: <small>Internet Service Provider</small></h3></li>
+                            <li><h3>OS:<small>Operating System</small></h3></li>
+                            <li><h3>GPS: <small>Global Positioning System</small></h3></li>
+                            <li><h3>SOPs: <small>Standard Operating Procedures</small></h3></li>
+                            <li><h3>DAC: <small>Discretionary Access Control</small></h3></li>
+                            <li><h3>RBAC: <small>Role-Base Access Control</small></h3></li>
+                            <li><h3>ACE: <small>Acces Control Entry</small></h3></li>
+                            <li><h3>MAC: <small>Media Access Control</small></h3></li>
+                            <li><h3>ABAC: <small>Attribute-Based Access Control</small></h3></li>
+                            <li><h3>PAM: <small>Prvileged Access Management</small></h3></li>
+                            <li><h3>CN: <small>Common Name</small></h3></li>
+                            <li><h3>OU: <small>Organizational Unit</small></h3></li>
+                            <li><h3>LDAP: <small>Lightweight Directory Access Protocol</small></h3></li>
+                            <li><h3>DN: <small>Domain Name</small></h3></li>
+                            <li><h3>CRM: <small> Customer Relationship Management</small></h3></li>
+                            <li><h3>NIST: <small>National Institute of Standards and Technology</small></h3></li>
+                            <li><h3>DNS: <small>Domain Name System</small></h3></li>
+                            <li><h3>FQDNs: <small>Fully Qualified Domain names</small></h3></li>
+                            <li><h3>OSI: <small>Open Systems Interconnection</small></h3></li>
+                            <li><h3>WAP: <small>Wireless Access Point</small></h3></li>
+                            <li><h3>IP: <small>Internet Protocol</small></h3></li>
+                            <li><h3>TCP: <small>Transport Control Protocol</small></h3></li>
+                            <li><h3>UDP: <small>User Datagram Protocol</small></h3></li>
+                            <li><h3>ARP: <small>Address Resolution Protocol</small></h3></li>
+                            <li><h3>BGP: <small>Border Gateway Protocol</small></h3></li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <ol start="41">
+
+                            <li><h3>OSPF: <small></small> Open Shortest Path First</h3></li>
+                            <li><h3>EIGRP: <small>Enhanced Interior Gateway Routing Protocol</small></h3></li>
+                            <li><h3>RIP: Routing Intormation Protocol <small></small></h3></li>
+                            <li><h3>VPN: <small>Virtual Private Network</small></h3></li>
+                            <li><h3>DMZ: <small>Demilitarized Zones</small></h3></li>
+                            <li><h3>CDNs: <small>Content Delivery Network</small></h3></li>
+                            <li><h3>BYOD: <small>Bring YOur Own Device</small></h3></li>
+                            <li><h3>MiTM: <small>Man-in-the-Middle</small></h3></li>
+                            <li><h3>BPDU: <small>Bridge Protocol Data Unit</small></h3></li>
+                            <li><h3>DP: <small>Designated Ports</small></h3></li>
+                            <li><h3>RP:  <small>Root Ports</small></h3></li>
+                            <li><h3>DHCP: <small>Dynamic Host Configuration Protocol</small></h3></li>
+                            <li><h3>loT: <small>Internet of Things</small></h3></li>
+                            <li><h3>NAC: <small> Network access control</small></h3></li>
+                            <li><h3>AAA: <small> Authentication, Authorization, Accounting</small></h3></li>
+                            <li><h3>IOS: <small>Internetwork Operating System</small></h3></li>
+                            <li><h3>IDS: <small>Intrusion Detection System</small></h3></li>
+                            <li><h3>BSSID: <small>Basic Service Set Identifier</small></h3></li>
+                            <li><h3>CCI: <small>Co-channel Interference</small></h3></li>
+                            <li><h3>Adjacent channel Interference <small></small></h3></li>
+                            <li><h3>WPA: <small>Wi-Fi Protected Access</small></h3></li>
+                            <li><h3>WEP: <small>Wired Equivalent Privacy</small></h3></li>
+                            <li><h3>TKIP: <small>Temporal Key Integrity Protocol</small></h3></li>
+                            <li><h3>GCMP: <small>Gaalois Counter Mode Protocol</small></h3></li>
+                            <li><h3>SAE: <small>Simultaneous Authentication Equal</small></h3></li>
+                            <li><h3>AES: <small>Advanced Encryption Standard</small></h3></li>
+                            <li><h3>SOC: <small>Security Operations Center</small></h3></li>
+                            <li><h3>DevOps: <small>Development and Operations</small></h3></li>
+                            <li><h3>PMK: <small> Pairwise Master</small></h3></li>
+                            <li><h3>MK: <small> Master Key</small></h3></li>
+                            <li><h3>EAP: <small>Extensible Authentication Protocol</small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+                            <li><h3> <small></small></h3></li>
+
+
+                            
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </body>
+</html>

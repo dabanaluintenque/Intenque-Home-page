@@ -1,0 +1,87 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Async Await</title>
+
+        <link rel="stylesheet" href="asyncAwait.css">
+    </head>
+
+    <body>
+
+        <div>
+            <h1> Async / Await</h1>
+
+           <p><b>async</b> makes a function return a Promise</p>
+           <p><b>await</b> makes a function wait for a promise</p> 
+        </div>
+
+        <div>
+            <h2>Async Syntax</h2>
+            <p> The keyword <b> async</b> before a function makes the function return a promise:</p>
+
+            <p><d>Example</d></p>
+
+            <b>async </b> function School( ) { </br>
+
+            <b>return</b> "students" </br>
+
+              }
+        </div>
+            
+        <div>
+            <h2> <b>How to use Promise?</b></h2>
+
+             <strong>School ( ).<d>then</d></strong> ( </br>
+             <d>function</d>(value) {/* <b> code if successful */</b>}</br>
+             <d>function</d>(error) {/* <b> code if some error */</b>}</br>
+             
+                
+             );</br>
+
+
+            <p>  <d>Example:</d></p>
+
+            <br>
+                <p>function Displayer( something ){</p>
+                <p>document.getElementById('idName').innerHTML = something; </p>}
+
+                <p><b>async</b> function School( ){</p>
+
+                <p><b>return </b> "students";</p>}
+
+
+                <p> School( ).<d>then </d>(</p>
+                <p>function (value) {Displayer(value);},</p>
+                <p>function (error) {Displaye(error);}</p>);
+
+            </section>
+
+           
+        </div>
+
+        <div>
+               <p><strong>Practice</strong></p>
+            <form>
+                <p id="example1"></p>
+                <input type="text" placeholder="Enter any" id="id1">
+                <input type="button" onClick="School()" value="submit">
+            </form>
+        </div>
+
+
+
+      <div>
+        <h2>Await Syntax</h2>
+
+        <p>The keyword <b>await</b> before a function makes the function wait for a promise:</p>
+        <strong>Example:</strong>
+
+        <p><d>let</d> value = <b>await</b> promise;</p>
+
+        <p>The <b>await</b> keyword can only be used inside an <b>async function.</b></p>
+      </div>
+        <script src="asyncAwait.js"></script>
+    </body>
+</html>

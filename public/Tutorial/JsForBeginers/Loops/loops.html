@@ -1,0 +1,256 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Loops</title>
+    <link rel="stylesheet" href="loops.css">
+</head>
+
+<body>
+    <h1> Loops</h1>
+    <div>
+        <b>Loops</b> execute a block of code number of times.<br>
+        Use loops if you want to run the some code over and over again, each time with a different value.
+    </div>
+
+    <div>
+        <h2>There are different kinds of Loops in JavaScript</h2>
+        <ul>
+            <li><b>for loops</b> loops through a block of code a number of times.</li>
+            <li><b>for/ in</b> loops through the properties of an object.</li>
+            <li><b>for/ of</b> loops through the values of an iterable object.</li>
+            <li><b>while</b> loops through a block of code while a specified condition is true.</li>
+            <li><b>do/while</b> also loops through a block of code while a specified condition is true.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>for loop</h2>
+        <b>for loop</b> loops through a block of code a number of times.<br>
+        <b>Syntax:</b><br>
+        <strong>
+            for( statement 1; statement 2; statement 3){ <br>
+
+            // block of code to be executed <br>
+            } <br> </strong> <br>
+        <d>statement 1</d> is executed <b>one time</b> before the execution of the code block. <b>(Starting point).</b>
+        </d><br>
+        <d> statement 2</d> defines the condition for executing the code block. <b>(How many time the loop will
+            run?)</b> <br>
+        <d> statement 3</d> is executed <b>every time</b> after the code block has been executed. <b>(Increase the value
+            each time the code block run).</b><br>
+
+        <d>Example:</d><br>
+        <strong> Enter the six hex decimal letters to know their values. (A-F) </strong><br>
+
+        <form>
+            <p id="example1"></p>
+            <label>Enter uppper case letters A-F:</label>
+            <input type="text" id="id1" placeholder="A" size="5" required>
+            <input type="text" id="id2" placeholder="B" size="5">
+            <input type="text" id="id3" placeholder="C" size="5">
+            <input type="text" id="id4" placeholder="D" size="5">
+            <input type="text" id="id5" placeholder="E" size="5">
+            <input type="text" id="id6" placeholder="F" size="5">
+            <input type="button" onclick="checkforLoop()" value="click">
+            <input type="reset">
+        </form>
+    </div>
+
+
+    <div>
+        <h2> for in</h2>
+        <b>for in</b> loops through the properties of an Object. <br>
+        <b>Syntax:</b><br>
+        <strong>
+            for(let key in object){<br>
+            // block of code to be execute <br>
+            } <br> </strong><br>
+
+        Example: <br>
+        const person = {firstName: "Dabana", lastName ="Intenque", age = 23};<br>
+
+        let values =""; <br>
+        for(let i in person){<br>
+        values += person[i]; <br>
+        }<br>
+        <b>Note:</b>
+        <ul>
+            <li>The <d>for in</d> loop iterates over a <d>person</d> object</li>
+            <li>Each iteration returns a <d>Key(i)</d>
+            </li>
+            <li>The key is used to access the <d>values</d>
+            </li>
+            <li>The values of the key is <d>person[i]</d>
+            </li>
+        </ul>
+
+        <strong>Note:</strong><br>
+        <b>for in Over Arrays</b> can also loop over the properties of an Array: <br>
+        But.<br>
+        Do not use <b>for in</b> over an Array if the index <b>order</b> is important.<br>
+        The index order is implementation-dependent, and array values may not be accessed in the order you expect.<br>
+        It is better to use a <b>for loop </b> or <b>Array.forEach()</b> when the order is important. <br>
+
+        <Strong>Iterate my Identity.</Strong>
+        <form>
+            <p id="example2"></p>
+            <label>First name:</label>
+            <input type="text" id="id7" placeholder="F. name" size="20"><br><br>
+            <label>Last name: </label><input type="text" id="id8" placeholder="L. name" size="20"><br><br>
+            <label>Middle name: </label><input type="text" id="id9" placeholder="M. name" size="20"><br><br>
+            <label>Enter your age: </label><input type="number" id="id10" placeholder="age"><br><br>
+            <label>School name: </label><input type="text" id="id11" placeholder="school" size="20"><br><br>
+            <label>Your Hobby: </label> <input type="text" id="id12" placeholder="Hobby" size="20"><br><br>
+            <input type="button" onclick="checkforIn()" value="click">
+            <input type="reset">
+        </form>
+    </div>
+
+
+    <div>
+        <h2> Array.forEach()</h2>
+        The <b>forEach()</b> method calls a function (a callback function) once for each array element.<br>
+
+        <b>Syntax:</b><br>
+        <strong>
+            const arrayName =[item1, item2, item3, ... , itemN];<br>
+            let text =""; <br>
+            arrayName.forEach(functionName);<br>
+            document.getElementById('idName').innerHTML = text;<br>
+            function functionName(value, index, array){<br>
+            text += value +"&lt;br&gt;" <br>
+            }<br>
+        </strong>
+        <b>Note:</b><br>
+        The functionName takes 3 arguments:
+        <ul>
+            <li>The item value</li>
+            <li>The item index</li>
+            <li>The array itself</li>
+        </ul>
+        But we only use one parameter (value).<br>
+        Which mean we can rewrite functionName(value); with only value parameter if we want. <br>
+
+        Example:<br>
+        <strong>Enter the name of your five closest friends.</strong>
+        <form>
+            <p id="example3"></p>
+            <label>Enter names:</label>
+            <input type="text" id="id13" size="15">
+            <input type="text" id="id14" size="15">
+            <input type="text" id="id15" size="15">
+            <input type="text" id="id16" size="15">
+            <input type="text" id="id17" size="15">
+            <input type="button" onclick="checkforEach()" value="click">
+            <input type="reset">
+        </form>
+    </div>
+
+
+    <div>
+        <h2> for of loop</h2>
+
+        <b>for of loop</b> through the values of an iterable object. <br>
+        It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:<br>
+
+        <b>Syntax:</b><br>
+        <strong>
+            for(let variable of iterable){ <br>
+            // block of code to be execute <br>
+            } <br>
+        </strong>
+        <d>Note:</d> iterable can be an array, object, string ... <br>
+
+        Example: <br>
+        <d>Name your five favority courses.</d>
+        <form>
+            <p id="example4"></p>
+            <label>Enter course name:</label>
+            <input type="text" id="id18" size="15">
+            <input type="text" id="id19" size="15">
+            <input type="text" id="id20" size="15">
+            <input type="text" id="id21" size="15">
+            <input type="text" id="id22" size="15">
+            <input type="button" onclick="checkforOf()" value="click">
+            <input type="reset">
+        </form>
+    </div>
+
+
+    <div>
+        <h2> while loop</h2>
+        <b>while loop</b> loops through a block of code as long as a specified condition is true. <br>
+
+        <b>Syntax:</b><br>
+        <strong>
+            while (condition){ <br>
+
+            // block to execute the code.<br>
+            }<br>
+            <d>Example:</d> <br>
+            let value ="";<br>
+            let i = 0;<br>
+            while(i &lt; 7){ <br>
+            value += i;<br>
+            i ++;<br>
+            } <br>
+            document.getElementById('idName').innerHTML = value;<br>
+
+        </strong>
+        <d>Name your five favority teachers.</d>
+        <form>
+            <p id="example5"></p>
+            <label>Enter name:</label>
+            <input type="text" id="id23" size="15">
+            <input type="text" id="id24" size="15">
+            <input type="text" id="id25" size="15">
+            <input type="text" id="id26" size="15">
+            <input type="text" id="id27" size="15">
+            <input type="button" onclick="checkWhile()" value="click">
+            <input type="reset">
+        </form>
+
+    </div>
+
+    <div>
+        <h2>do while loop</h2>
+        <b>do while</b> loop is a variant of the while loop. <d>do while loop</d> will execute the code block once<br>
+        before checking if the condition is true, then repeat the loop as long the condition is true. <br>
+
+        <b>Syntax:</b> <br>
+        <strong>
+            do { <br>
+            // code block to be executed <br>
+            } <br>
+            while(condition);
+
+            <b>Example:</b><br>
+            let value=""; <br>
+            let i =0; <br>
+            do{ <br>
+
+            value += i; <br>
+            i ++; <br>
+            } <br>
+            while(i &lt; 7);<br>
+        </strong>
+        <d>Enter a list of your five favority books title or actor.</d>
+        <form>
+            <p id="example6"></p>
+            <label>Enter book title or actor</label>
+            <input type="text" id="id28" size="15">
+            <input type="text" id="id29" size="15">
+            <input type="text" id="id30" size="15">
+            <input type="text" id="id31" size="15">
+            <input type="text" id="id32" size="15">
+            <input type="button" onclick="checkdoWhile()" value="click">
+            <input type="reset">
+        </form>
+    </div>
+
+      
+    <script src="loops.js"></script>
+</body>
+
+</html>

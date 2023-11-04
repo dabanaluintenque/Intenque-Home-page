@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Maps</title>
+        <link rel="stylesheet" href="maps.css">
+    </head>
+    <body>
+        <h1>Maps</h1>
+        <b> What is a map?</b><br>
+        A <d>map</d> holds key-value pairs where the keys can be any datatype. <br>
+        A <d>map</d> remembers the original insertion order of the keys.
+
+        <div>
+            <h2>Essential maps Methods</h2>
+            <table>
+                <th>Method</th>
+                <th>Description</th>
+                <tr>
+                    <td><d>new Map()</d></td>
+                    <td>Creates a new Map</td>
+                </tr>
+                <tr>
+                    <td><d>set()</d></td>
+                    <td>Sets the value for a key in a Map</td>
+                </tr>
+                <tr>
+                    <td><d>get</d></td>
+                    <td>Gets the value for a key in a Map</td>
+                </tr>
+                <tr>
+                    <td><d>delete()</d></td>
+                    <td>Removes a Map element specified by the key</td>
+                </tr>
+                <tr>
+                  <td><d>has()</d></td>
+                  <td>Returns true if a key exists in a Map</td> 
+                </tr>
+                <tr>
+                    <td><d>forEach()</d></td>
+                    <td>Calls a function for each key/value pair in a Map</td>
+                </tr>
+                <tr>
+                    <td><d>entries()</d></td>
+                    <td>Returns an iterator with the [key, value] pairs in a Map</td>
+                </tr>
+                <tr>
+                    <td>
+                        <d>size</d>
+                    </td>
+                    <td>Returns the number of element in a Map</td>
+                </tr>
+                
+            </table>
+
+        </div>
+        
+        <div>
+            <h2><b>How to Create a Map?</b></h2>
+            We can create a Map by:
+            <ol>
+                <li>Passing an Array to <d>new Map()</d></li>
+                <li>Create a Map and use <d>Map.set()</d></li>
+            </ol>
+        </div>
+
+        <div>
+            <h2>The new Map() Method</h2>
+            <d>We can create a Map by passing <b>an Array</b> to the <b>new Map()</b> constructor:</d><br>
+
+            <b>Syntax:</b><br>
+            const items = new Map([ <br>
+             ["item1", 1],<br>
+            [ "item2", 2],<br>
+             ["item3", 3],<br>
+             .<br>
+             .<br>
+             .<br>
+            [ "itemN", n] <br>
+             ]);<br>
+
+             Example:<br>
+             <p><d>Use Map to store your friends phone number.</d></p>
+
+             <p id="example1"></p>
+             <button onclick="checkMap()"> phone-Number</button>
+
+        </div>
+
+           <h2>Create a Map and use <d>Map.set()</d></h2>
+           <b>set() Method</b> can add or change elements in a Map().<br>
+           <b>Syntax:</b><br>
+           <strong>
+           const items = new Map()<br>
+           items.set("item1", 1);<br>
+           items.set("item2", 2);<br>
+           items.set("item3", 3);<br>
+           .<br>
+           .<br>
+           .<br>
+           items.set("itemN", n);<br> </strong>
+
+           <form>
+                <p id="example2"></p>
+               <label>Save your friends phone number:</label><br>
+               <input type="text" id="id1" placeholder="Dabana" size="15">
+               <input type="phone" id="id2" placeholder="508-810-0001" size="15"><br><br>
+               <input type="text" id="id3" placeholder="Jorge" size="15">
+               <input type="phone" id="id4" placeholder="508-881-0002" size="15"> <br><br>
+               <input type="text" id="id5" placeholder="Intenque" size="15">
+               <input type="phone" id="id6" placeholder="508-318-0003" size="15"><br><br>
+               <input type="button" onclick="checkSet()" value="Save">
+               <input type="reset">
+
+          
+           </form>
+
+              <div>
+                  <h2> entries() Method</h2>
+                  <b>entries() method</b> returns an iterator object with the key and value pairs.<br>
+
+                  <b>Syntax:</b><br>
+                   <strong>
+                  const item1 = new Map([ <br>
+                  ["item1" ,1],<br>
+                  ["item2" ,2],<br>
+                  ["item3" ,3],<br>
+                  .<br>
+                  .<br>
+                  .<br>
+                  ["itemN" ,n]<br>
+                  ]);<br>
+                  let value ="";<br>
+                  for(let i of items.entries()){<br>
+                    
+                    value += i;<br>
+                  }<br>
+                </strong>
+
+                Example:
+                <form>
+                    <p id="example3"></p>
+                    <label>Enter name and phone number:</label>
+                    <input type="text" id="id7" placeholder="Dabana">
+                    <input type="phone" id="id8" placeholder="508-818-33-00">
+                    <input type="button" onclick="checkEntries()" value="click">
+                    <input type="reset">
+                </form>
+              </div>
+        
+    <script src="maps.js"></script>
+    </body>
+</html>
