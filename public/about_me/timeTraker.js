@@ -65,6 +65,14 @@ let day31 = timeTracker(9,52,14,50);
 let day32 = timeTracker(9,31,13,50);
 let day33 = timeTracker(19,48,22,0);
 let day34 = timeTracker(15,29,19,0);
+let day35 = timeTracker(17,30,23,20);
+let day36 = timeTracker(20,25,21,30);
+let day37 = timeTracker(20,0,22,27);
+let day38 = timeTracker(19,0,22,7);
+let day39 = timeTracker(13,33,16,38);
+let day40 = timeTracker(7,45,10,0);
+let day41 = timeTracker(8,13,9,31);
+let day42 = timeTracker(16,4,21,51);
 
 let number_of_days =[];
 number_of_days.push(day1);
@@ -103,6 +111,14 @@ number_of_days.push(day31);
 number_of_days.push(day32);
 number_of_days.push(day33);
 number_of_days.push(day34);
+number_of_days.push(day35);
+number_of_days.push(day36);
+number_of_days.push(day37);
+number_of_days.push(day38);
+number_of_days.push(day39);
+number_of_days.push(day40);
+number_of_days.push(day41);
+number_of_days.push(day42);
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
@@ -140,8 +156,14 @@ const day31Time = document.getElementById('day31').innerHTML = convert_to_time_f
 const day32Time = document.getElementById('day32').innerHTML = convert_to_time_format(number_of_days[33]);
 const day33Time = document.getElementById('day33').innerHTML = convert_to_time_format(number_of_days[34]);
 const day34Time = document.getElementById('day34').innerHTML = convert_to_time_format(number_of_days[35]);
-
-
+const day35Time = document.getElementById('day35').innerHTML = convert_to_time_format(number_of_days[36]);
+const day36Time = document.getElementById('day36').innerHTML = convert_to_time_format(number_of_days[37]);
+const day37Time = document.getElementById('day37').innerHTML = convert_to_time_format(number_of_days[38]);
+const day38Time = document.getElementById('day38').innerHTML = convert_to_time_format(number_of_days[39]);
+const day39Time = document.getElementById('day39').innerHTML = convert_to_time_format(number_of_days[40]);
+const day40Time = document.getElementById('day40').innerHTML = convert_to_time_format(number_of_days[41]);
+const day41Time = document.getElementById('day41').innerHTML = convert_to_time_format(number_of_days[42]);
+const day42Time = document.getElementById('day42').innerHTML = convert_to_time_format(number_of_days[43]);
 
 
 

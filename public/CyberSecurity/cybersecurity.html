@@ -7,13 +7,15 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         />
+        <link rel="stylesheet" href="./cybersecurity.css">
     </head>
      <body>
         <div class="container" >
             <h1 style="text-align: center;">CyberSecurity</h1>
+            <h5 style="text-align: center; margin: 3%"><a href="./CySa.html">Learn CySA+</a></h5>
             <div class="row">
                 <div class="col">
-                    <h3>How to Brute force discover someone password using John the Ripper in Linux?</h3>
+                    <h5>How to Brute force discover someone password using John the Ripper in Linux?</h5>
                     <section>
                         <ol>
                             <li>
@@ -28,7 +30,7 @@
                             <li>
                                 <section>on the root create a file where you saved the list of passowrd you will use to attempt brake the computer</section>
                                 <section>
-                                    <img src="./cyber_images/cyber_2.png" alt="txt file">
+                                    <img src="./cyber_images//cyber_2.png" alt="txt file">
                                 </section>
                             </li>
                             <li>
@@ -40,18 +42,16 @@
                                 <section>
                                     <img src="./cyber_images/cyber_3.png" alt="john the ripper">
                                 </section>
-
                             </li>
-
                         </ol>
                     </section>
                 </div>
                 <div class="col">
-                    <h2>How to add a new user in windows?</h2>
+                    <h5>How to add a new user in windows?</h5>
                     <section>
                         <section>
                             <section>step 1: login as administrator</section>
-                            <section>step 2: righ click in on "start"</section>
+                            <section>step 5: righ click in on "start"</section>
                             <section>step 3: click "Computer Management"</section>
                             <section>step 4: on the Computer Management panel click "Local Users and Groups"</section>
                             <section>step 5: right click in "Users"</section>
@@ -60,11 +60,11 @@
                         </section>
                     </section>
                     <p></p>
-                    <h2>How to add a new user in Linux using terminal?</h2>
+                    <h5>How to add a new user in Linux using terminal?</h5>
                     <section>
                         <section>
                             <section>step 1: open terminal</section>
-                            <section>step 2: login as root in terminal using this command "sudo su -"</section>
+                            <section>step 5: login as root in terminal using this command "sudo su -"</section>
                             <section>step 3: enter your root password</section>
                             <section>step 4: type "sudo adduser username" 
                                 <small>Note: change the username by the name of the user you want to add.
@@ -75,15 +75,15 @@
                         </section>
                     </section>
                     <div>
-                        <h2>How to disable an administrator account when a adim leave a company?</h2>
+                        <h5>How to disable an administrator account when a adim leave a company?</h5>
                         <section>
                             <ol>
                                 <li>
-                                    <section>Use the windows Server 2016/2019 CMD tool to disable the user account</section>
+                                    <section>Use the windows Server 5016/5019 CMD tool to disable the user account</section>
                                     <section>"C:\Users\Administrator >net user username/active: no"</section>
                                 </li>
                                 <li>
-                                    <section>Use the Windows Server 2016/2019 CMD too to change the Administrator password for the file server(s).</section>
+                                    <section>Use the Windows Server 5016/5019 CMD too to change the Administrator password for the file server(s).</section>
                                     <section>"C:\Users\Administrator> net user administrator newPassword</section>
                                 </li>
                             </ol>
@@ -91,102 +91,337 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h1>A number of network appliances are involved in provisioning a network architecture:</h1>
-                    <img src="./cyber_images/internet_layers.png" alt="network appliances image">
+                    <div class="col" style="margin-bottom: 5%;">
+                        <h3>File Manipulation</h3>
+                        <section>
+                            <section>
+                                <h4>The cat Command</h4>
+                                The Linux cat command allows you to view the contents of one or more files.
+                            </section>
+                            <section>If you want to view the whole contents of two rotated log files, you could run:</section>
+                            <section>"cat -n access.log access5.log"</section>
+                        </section>
+                        <section>
+                            <section>
+                                If you wanted to output to a new file rather than the terminal you can run:
+                            </section>
+                            <section>"cat -n access.log access5.log > access_cat.log"</section>
+                        </section>
+                        <section>
+                            <h4>The head and tial Commands</h4>
+                            <section>The following command shows 50 most recent entries of a log file:</section>
+                            <section>"tail -n 50 /var/log/messages"</section>
+                        </section>
+                        <section>
+                            <h4> The logger Command</h4>
+                            <section>The logger command writes input to the local system log or to a remote syslog server.</section>
+                            <section>
+                                The following command writes the name of the local machine along with the text "up" to the syslog server at 10.1.0.545:
+                            </section>
+                            <section>"logger -n 10.1.0.545  `hostname` up</section>
+                        </section>
+                        <section>
+                            <h4>Grep Command</h4>
+                            <section>
+                                <section>
+                                    This command enables you to search the entire content of a text file
+                                </section>
+                                <section>for a specific pattern within each line and display that pattern on the screen or </section>
+                                <section>dump it to another file. A simple example of grep usage is as follows:</section>
+                                <section>grep -F 195.168.1.554 access.log</section>
+                            </section>
+                        </section>
+                        <section>
+                            <section>
+                                The floowing example searches for any IP address in the 195.168.1.0./54 subnet
+                            </section>
+                            <section>Note that each period must be escaped within any file directory from the current one.</section>
+                            <section>The -r option enables recursion, while the period in the target part indicates the current directory:</section>
+                            <section>grep -r 195\.168\.1\.[\d]{1,3} ./</section>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <h5>Ports</h5>
+                        <ol>
+                            <li>LDAP:<small> port 389</small></li>
+                            <li>LDAPS:<small> port 636</small></li>
+                            <li>NTP: <small> UDP on Port 123 </small></li>
+                            <li>SNMP: <small> UDP on Port 161 & 162</small></li>
+                            <li>HTTP:<small> TCP port 80</small></li>
+                            <li>HTTPS:<small> port 443 </small></li>
+                            <li>SSL:<small> port 465</small></li>
+                            <li>TLS/STARTTLS:<small> port 587</small></li>
+                            <li>IMAPS<small> Port 993</small></li>
+                            <li>SSH<small> use Custom server port 22</small></li>
+                            <li><small></small></li>
+                            <li><small></small></li>
+                            <li><small></small></li>
+                            <li><small></small></li>
+                            <li><small></small></li>
+                            <li><small></small></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 5%;">
+                    <div class="col">
+                        <h5>Lunix Commands</h5>
+                        <section>
+                            <p><b>whois</b> => can be used to lookup domain registration information to try to detect misuse in other cases.<br>
+                                Example: "whois google.com"<br>
+                                <img class="img_size" src ="./cyber_images/whois.png" alt="whois command">
+                            </p>
+                            <p><b>pwd</b> => Report the full path to the current directory <br>
+                                <img class="img_size" src="./cyber_images/pwd.png" alt="pwd command">
+                            </p>
+                            <p><b>ip a s etch0</b> => shows the network adapter configuration <br>
+                                <img class="img_size" src="./cyber_images/ip_a_s_eth0.png" alt="ip a s eth0">
+                            </p>
+                            <p><b>hostname</b>=> dysplay the system's name. <br>
+                                <img class="img_size" src="./cyber_images/hostname.png" alt="hostname">
+                            </p>
+                        </section>
+                        <section>
+                            <h6>SSH Commands</h6>
+                            <p>SSH commands are used to connect to hosts and set up authentication methods.</p>
+                            <p>To connect to an SSH server at 10.1.0.10 using an account named "bobby" and password authentication, run: <br>
+                                <small>ssh booby@10.1.0.10</small>
+                            </p>
+                            <p>The following commands create a new key pair and copy it to an account on the remote server <br>
+                                <small>ssh-keygen -t rsa</small> <br>
+                                <small>ssh-copy-id boby@10.1.0.10</small>
+                            </p>
+                            <p>In an SSH prompt use the standart Linux  shell commands. <br>
+                                <small>exit</small>
+                            </p>
+                            <p>You can also use the <small>scp</small> commando to copy a file from the remote server to the local host:<br>
+                                <small>scp booby@10.1.0.10:/logs/audit.log audit.log</small>
+                            </p>
+                            <p>Reverse the argumens to copy a file from the local host to the remote server. To copy contents <br>
+                                of a directory and any subdirectories (recursively), use the <small>-r</small> option.
+                            </p>
+                        </section>
+                        <b>To see all the ports listening on the server run: <br>
+                            <small>sudo lsof -i -n -p | grep LISTEN</small>
+                        </b>
+                    </div>
+                    <div class="col">
+                        <h5>Windows Commands</h5>
+                        <section>
+
+                        </section>
+                    </div>
                 </div>
                 <div class="row">
-                    <h2 style="text-align: center;">List of words used in cyberSecurity and meanings</h2>
+                    <div class="col">
+                        <h5>Linux Managing Access Controls</h5>
+                        <p>
+                            <b>How to manage access controls on a Linux server.</b> <br>
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>A number of network appliances are involved in provisioning a network architecture:</h4>
+                    <img src="./cyber_images/internet_layers.png" alt="network appliances image">
+                </div>
+                <div class="row" style="margin-top: 5%; margin-bottom: 5%;">
+                    <h5>Firewall</h5>
+                    <div class="col">
+                        <img src="./cyber_images/Iptables.png" alt="iptables" style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="col">
+                        <img src="./cyber_images/Radio_firewall_rules.png" alt="radios" style="width: 100%; height: 100%;">
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 5%;">
+                    <div class="col">
+                        <h4>DNS Client Cache Poisoning</h4>
+                        <section>
+                            <section>If an attacker is able to place a false "name: IP address" mapping in the HOSTS file and </section>
+                            <section>effectively poison the DNS cache, he or she will be able to redirect traffic. The HOSTS file</section>
+                            <section>requires administrator access to modify it.</section>
+                            <section>In Linux and UNIX systems it is sotred as /etc/hosts: <br>
+                                <img src="./cyber_images/linuxdns.png" alt="Dns linux">
+                            </section>
+                            <section>In Windows it is placed in %SystemRoot%32\Drivers\etc\hosts: <br>
+                                <img src="./cyber_images//windows_dins.png" alt="Dns Windows">
+                            </section>
+                            <section>
+                                <h5>How do I run a host file?</h5>
+                                <section>Right click on Notepad and select "Run as Administrator</section>
+                                <section>Not click File > Open and browse to: "c\Windows\System32\Drivers\hosts</section>
+                            </section>
+                        </section>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 5%">
+                    <h5 style="text-align: center;">TLS Handshake</h5>
+                    <img src="./cyber_images/tls_handshake.png">
+                </div>
+                <div class="row">
+                    <h5 style="text-align: center;">List of words used in cyberSecurity and meanings</h5>
                     <div class="col">
                         <ol>
-                            <li><h3>CA: <small>Certificate Authority</small></h3></li>
-                            <li><h3>PKI: <small>Public Key Infrastructure</small></h3></li>
-                            <li><h3>TPM: <small>Trusted Platform Module</small></h3></li>
-                            <li><h3>IdP: <small>Identity Provider</small></h3></li>
-                            <li><h3>IAM: <small>Identity Access Management</small></h3></li>
-                            <li><h3>NDA: <small>Nondisclosure Agreement</small></h3></li>
-                            <li><h3>SOPs: <small>Standard Operating Procedures</small></h3></li>
-                            <li><h3>ACL: <small>Access Control List</small></h3></li>
-                            <li><h3>MFA: <small>Multifactor Authentication</small></h3></li>
-                            <li><h3>SSH: <small>Secure Shell</small></h3></li>
-                            <li><h3>API: <small>Application Programming Interface</small></h3></li>
-                            <li><h3>SID:  <small>security identifier</small></h3></li>
-                            <li><h3>GPOs: <small>Group Policy Objects</small></h3></li>
-                            <li><h3>UN: <small>Organizational Units</small></h3></li>
-                            <li><h3>AD: <small>Active Directory</small></h3></li>
-                            <li><h3>ISP: <small>Internet Service Provider</small></h3></li>
-                            <li><h3>OS:<small>Operating System</small></h3></li>
-                            <li><h3>GPS: <small>Global Positioning System</small></h3></li>
-                            <li><h3>SOPs: <small>Standard Operating Procedures</small></h3></li>
-                            <li><h3>DAC: <small>Discretionary Access Control</small></h3></li>
-                            <li><h3>RBAC: <small>Role-Base Access Control</small></h3></li>
-                            <li><h3>ACE: <small>Acces Control Entry</small></h3></li>
-                            <li><h3>MAC: <small>Media Access Control</small></h3></li>
-                            <li><h3>ABAC: <small>Attribute-Based Access Control</small></h3></li>
-                            <li><h3>PAM: <small>Prvileged Access Management</small></h3></li>
-                            <li><h3>CN: <small>Common Name</small></h3></li>
-                            <li><h3>OU: <small>Organizational Unit</small></h3></li>
-                            <li><h3>LDAP: <small>Lightweight Directory Access Protocol</small></h3></li>
-                            <li><h3>DN: <small>Domain Name</small></h3></li>
-                            <li><h3>CRM: <small> Customer Relationship Management</small></h3></li>
-                            <li><h3>NIST: <small>National Institute of Standards and Technology</small></h3></li>
-                            <li><h3>DNS: <small>Domain Name System</small></h3></li>
-                            <li><h3>FQDNs: <small>Fully Qualified Domain names</small></h3></li>
-                            <li><h3>OSI: <small>Open Systems Interconnection</small></h3></li>
-                            <li><h3>WAP: <small>Wireless Access Point</small></h3></li>
-                            <li><h3>IP: <small>Internet Protocol</small></h3></li>
-                            <li><h3>TCP: <small>Transport Control Protocol</small></h3></li>
-                            <li><h3>UDP: <small>User Datagram Protocol</small></h3></li>
-                            <li><h3>ARP: <small>Address Resolution Protocol</small></h3></li>
-                            <li><h3>BGP: <small>Border Gateway Protocol</small></h3></li>
+                            <li><h5>CA: <small>Certificate Authority</small></h5></li>
+                            <li><h5>PKI: <small>Public Key Infrastructure</small></h5></li>
+                            <li><h5>TPM: <small>Trusted Platform Module</small></h5></li>
+                            <li><h5>IdP: <small>Identity Provider</small></h5></li>
+                            <li><h5>IAM: <small>Identity Access Management</small></h5></li>
+                            <li><h5>NDA: <small>Nondisclosure Agreement</small></h5></li>
+                            <li><h5>SOPs: <small>Standard Operating Procedures</small></h5></li>
+                            <li><h5>ACL: <small>Access Control List</small></h5></li>
+                            <li><h5>MFA: <small>Multifactor Authentication</small></h5></li>
+                            <li><h5>SSH: <small>Secure Shell</small></h5></li>
+                            <li><h5>API: <small>Application Programming Interface</small></h5></li>
+                            <li><h5>SID:  <small>security identifier</small></h5></li>
+                            <li><h5>GPOs: <small>Group Policy Objects</small></h5></li>
+                            <li><h5>UN: <small>Organizational Units</small></h5></li>
+                            <li><h5>AD: <small>Active Directory</small></h5></li>
+                            <li><h5>ISP: <small>Internet Service Provider</small></h5></li>
+                            <li><h5>OS:<small>Operating System</small></h5></li>
+                            <li><h5>GPS: <small>Global Positioning System</small></h5></li>
+                            <li><h5>SOPs: <small>Standard Operating Procedures</small></h5></li>
+                            <li><h5>DAC: <small>Discretionary Access Control</small></h5></li>
+                            <li><h5>RBAC: <small>Role-Base Access Control</small></h5></li>
+                            <li><h5>ACE: <small>Acces Control Entry</small></h5></li>
+                            <li><h5>MAC: <small>Media Access Control</small></h5></li>
+                            <li><h5>ABAC: <small>Attribute-Based Access Control</small></h5></li>
+                            <li><h5>PAM: <small>Prvileged Access Management</small></h5></li>
+                            <li><h5>CN: <small>Common Name</small></h5></li>
+                            <li><h5>OU: <small>Organizational Unit</small></h5></li>
+                            <li><h5>LDAP: <small>Lightweight Directory Access Protocol</small></h5></li>
+                            <li><h5>DN: <small>Domain Name</small></h5></li>
+                            <li><h5>CRM: <small> Customer Relationship Management</small></h5></li>
+                            <li><h5>NIST: <small>National Institute of Standards and Technology</small></h5></li>
+                            <li><h5>DNS: <small>Domain Name System</small></h5></li>
+                            <li><h5>FQDNs: <small>Fully Qualified Domain names</small></h5></li>
+                            <li><h5>OSI: <small>Open Systems Interconnection</small></h5></li>
+                            <li><h5>WAP: <small>Wireless Access Point</small></h5></li>
+                            <li><h5>IP: <small>Internet Protocol</small></h5></li>
+                            <li><h5>TCP: <small>Transport Control Protocol</small></h5></li>
+                            <li><h5>UDP: <small>User Datagram Protocol</small></h5></li>
+                            <li><h5>ARP: <small>Address Resolution Protocol</small></h5></li>
+                            <li><h5>BGP: <small>Border Gateway Protocol</small></h5></li>
+                            <li><h5>OSPF: <small></small> Open Shortest Path First</h5></li>
+                            <li><h5>EIGRP: <small>Enhanced Interior Gateway Routing Protocol</small></h5></li>
+                            <li><h5>RIP: Routing Intormation Protocol <small></small></h5></li>
+                            <li><h5>VPN: <small>Virtual Private Network</small></h5></li>
+                            <li><h5>DMZ: <small>Demilitarized Zones</small></h5></li>
+                            <li><h5>CDNs: <small>Content Delivery Network</small></h5></li>
+                            <li><h5>BYOD: <small>Bring YOur Own Device</small></h5></li>
+                            <li><h5>MiTM: <small>Man-in-the-Middle</small></h5></li>
+                            <li><h5>BPDU: <small>Bridge Protocol Data Unit</small></h5></li>
+                            <li><h5>DP: <small>Designated Ports</small></h5></li>
+                            <li><h5>RP:  <small>Root Ports</small></h5></li>
+                            <li><h5>DHCP: <small>Dynamic Host Configuration Protocol</small></h5></li>
+                            <li><h5>loT: <small>Internet of Things</small></h5></li>
+                            <li><h5>NAC: <small> Network access control</small></h5></li>
+                            <li><h5>AAA: <small> Authentication, Authorization, Accounting</small></h5></li>
+                            <li><h5>IOS: <small>Internetwork Operating System</small></h5></li>
+                            <li><h5>IDS: <small>Intrusion Detection System</small></h5></li>
+                            <li><h5>BSSID: <small>Basic Service Set Identifier</small></h5></li>
+                            <li><h5>CCI: <small>Co-channel Interference</small></h5></li>
+                            <li><h5>Adjacent channel Interference <small></small></h5></li>
+                            <li><h5>WPA: <small>Wi-Fi Protected Access</small></h5></li>
+                            <li><h5>WEP: <small>Wired Equivalent Privacy</small></h5></li>
+                            <li><h5>TKIP: <small>Temporal Key Integrity Protocol</small></h5></li>
+                            <li><h5>GCMP: <small>Gaalois Counter Mode Protocol</small></h5></li>
+                            <li><h5>SAE: <small>Simultaneous Authentication Equal</small></h5></li>
+                            <li><h5>AES: <small>Advanced Encryption Standard</small></h5></li>
+                            <li><h5>SOC: <small>Security Operations Center</small></h5></li>
+                            <li><h5>DevOps: <small>Development and Operations</small></h5></li>
+                            <li><h5>PMK: <small> Pairwise Master</small></h5></li>
+                            <li><h5>MK: <small> Master Key</small></h5></li>
+                            <li><h5>EAP: <small>Extensible Authentication Protocol</small></h5></li>
+                            <li><h5>MFP: <small>Management Frame Protection</small></h5></li>
+                            <li><h5>IV: <small>Initialization Vector</small></h5></li>
+                            <li><h5>DoS: <small>Denial of Service</small></h5></li>
+                            <li><h5>DDoS: <small>Distributed Denial of Service</small></h5></li>
+                            <li><h5>DRDoS: <small>Distributed Relection Denial of Service</small></h5></li>
+                            <li><h5>NTP: <small>Network Time Protocol</small></h5></li>
+                            <li><h5>OT: <small>Operation Technology</small></h5></li>
+                            <li><h5>BGP: <small> Border Geteway Protocol</small></h5></li>
+                            <li><h5>CARP:<small> Common Address Redundancy Protocol</small></h5></li>
                         </ol>
                     </div>
                     <div class="col">
-                        <ol start="41">
+                        <ol start="81">
+                            <li><h5>A/P: <small>Active/Passive</small></h5></li>
+                            <li><h5>A/A: <small>Active/Active</small></h5></li>
+                            <li><h5>FIFO: <small>First In First Out</small></h5></li>
+                            <li><h5>QoS: <small>Quality of Service</small></h5></li>
+                            <li><h5>CoS: <small>Class of Service</small></h5></li>
+                            <li><h5>NOS: <small>Network Operating System</small></h5></li>
+                            <li><h5>NAT: <small>Network Address Translation</small></h5></li>
+                            <li><h5>NAPT: <small>Network Address Port Translation</small></h5></li>
+                            <li><h5>IDS: <small>Intrusion Detection System</small></h5></li>
+                            <li><h5>NIDS: <small>Network-based Intrusion Detection System</small></h5></li>
+                            <li><h5>TAP: <small> Test Access Point</small></h5></li>
+                            <li><h5>SPAN: <small> Switched Port Analyzer</small></h5></li>
+                            <li><h5>IPS: <small> Intrusion Prevention System</small></h5></li>
+                            <li><h5>DLP: <small>Data Loss Prevention</small></h5></li>
+                            <li><h5>CASB: <small>Cloud Access Security Brokers</small></h5></li>
+                            <li><h5>UTM: <small>Unified Threat Management</small></h5></li>
+                            <li><h5>IPS: <small>Intrusion Prevention System</small></h5></li>
+                            <li><h5>NGFW: <small>Next Generation Firewall</small></h5></li>
+                            <li><h5>HIDS: <small>Host-Based Intrusion Detection System</small></h5></li>
+                            <li><h5>FIM: <small>File Integrity Monitoring</small></h5></li>
+                            <li><h5>sfc: <small>System File Checker</small></h5></li>
+                            <li><h5>WAF: <small>Web Application Firewall</small></h5></li>
+                            <li><h5>SNMP: <small>Simple Network Management Protocol</small></h5></li>
+                            <li><h5>SIEM: <small>Security Information Event Management</small></h5></li>
+                            <li><h5>SOAR: <small>Security Orchestration Automation Response</small></h5></li>
+                            <li><h5>UEBA: <small>User Entity Behavior Analytics</small></h5></li>
+                            <li><h5>IOC: <small>Indicator Of Compromise</small></h5></li>
+                            <li><h5>regex: <small>Regular Expressions</small></h5></li>
+                            <li><h5>DHCP: <small>Dynamic Host Configuration Protocol</small></h5></li>
+                            <li><h5>URL: <small>Uniform Resource Locator</small></h5></li>
+                            <li><h5>BIND: <small>Berkeley Internet Name Domain</small></h5></li>
+                            <li><h5>isc: <small>Internet, Software Consortium</small></h5></li>
+                            <li><h5>LDAP: <small>Lightweight Directory Access Protocol</small></h5></li>
+                            <li><h5>SASL: <small>Simple Authentication Security Layer</small></h5></li>
+                            <li><h5>LAN: <small>Local Area Network</small></h5></li>
+                            <li><h5>SNMP: <small>Simple Network Management Protocol</small></h5></li>
+                            <li><h5>MIB: <small>Management Information Base</small></h5></li>
+                            <li><h5>HTTP: <small>HyperText Transfer Protocol</small></h5></li>
+                            <li><h5>HTML: <small>HyperText Markup Language</small></h5></li>
+                            <li><h5>SSL: <small>Secure Sockets Layer</small></h5></li>
+                            <li><h5>TLS: <small> Transport Layer security</small></h5></li>
+                            <li><h5>GCM: <small>Galois Counter Model</small></h5></li>
+                            <li><h5>HKDF: <small>Hash Key Derivation Function</small></h5></li>
+                            <li><h5>RSS: <small>Really Simple Syndication</small></h5></li>
+                            <li><h5>SSO: <small>Single Singn On</small></h5></li>
+                            <li><h5>IMAP <small>Internet Message Access Protocol</small></h5></li>
+                            <li><h5>OOB: <small> Out-of-band</small></h5></li>
+                            <li><h5>SAWs <small> Secure Admin Workstations</small></h5></li>
+                            <li><h5>SFTP: <small> Secure File Transfer Protocol</small></h5></li>
+                            <li><h5>NOS: <small>Network Operating System</small></h5></li>
+                            <li><h5>SPN: <small> Service Principal Name</small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
 
-                            <li><h3>OSPF: <small></small> Open Shortest Path First</h3></li>
-                            <li><h3>EIGRP: <small>Enhanced Interior Gateway Routing Protocol</small></h3></li>
-                            <li><h3>RIP: Routing Intormation Protocol <small></small></h3></li>
-                            <li><h3>VPN: <small>Virtual Private Network</small></h3></li>
-                            <li><h3>DMZ: <small>Demilitarized Zones</small></h3></li>
-                            <li><h3>CDNs: <small>Content Delivery Network</small></h3></li>
-                            <li><h3>BYOD: <small>Bring YOur Own Device</small></h3></li>
-                            <li><h3>MiTM: <small>Man-in-the-Middle</small></h3></li>
-                            <li><h3>BPDU: <small>Bridge Protocol Data Unit</small></h3></li>
-                            <li><h3>DP: <small>Designated Ports</small></h3></li>
-                            <li><h3>RP:  <small>Root Ports</small></h3></li>
-                            <li><h3>DHCP: <small>Dynamic Host Configuration Protocol</small></h3></li>
-                            <li><h3>loT: <small>Internet of Things</small></h3></li>
-                            <li><h3>NAC: <small> Network access control</small></h3></li>
-                            <li><h3>AAA: <small> Authentication, Authorization, Accounting</small></h3></li>
-                            <li><h3>IOS: <small>Internetwork Operating System</small></h3></li>
-                            <li><h3>IDS: <small>Intrusion Detection System</small></h3></li>
-                            <li><h3>BSSID: <small>Basic Service Set Identifier</small></h3></li>
-                            <li><h3>CCI: <small>Co-channel Interference</small></h3></li>
-                            <li><h3>Adjacent channel Interference <small></small></h3></li>
-                            <li><h3>WPA: <small>Wi-Fi Protected Access</small></h3></li>
-                            <li><h3>WEP: <small>Wired Equivalent Privacy</small></h3></li>
-                            <li><h3>TKIP: <small>Temporal Key Integrity Protocol</small></h3></li>
-                            <li><h3>GCMP: <small>Gaalois Counter Mode Protocol</small></h3></li>
-                            <li><h3>SAE: <small>Simultaneous Authentication Equal</small></h3></li>
-                            <li><h3>AES: <small>Advanced Encryption Standard</small></h3></li>
-                            <li><h3>SOC: <small>Security Operations Center</small></h3></li>
-                            <li><h3>DevOps: <small>Development and Operations</small></h3></li>
-                            <li><h3>PMK: <small> Pairwise Master</small></h3></li>
-                            <li><h3>MK: <small> Master Key</small></h3></li>
-                            <li><h3>EAP: <small>Extensible Authentication Protocol</small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-                            <li><h3> <small></small></h3></li>
-
-
-                            
                         </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1>Links</h1>
+                        <section>
+                            <h5><a href="https://regexr.com/">Regular Expressions</a></h5>
+                            <h5><a href="https://www.isc.org/">Internet Software Consortium</a></h5>
+                            <h5><a href="https://blog.cloudflare.com/secure-time/">Network Time Security</a></h5>
+                            <h5><a href="https://mikeknoop.com/lxml-xxe-exploit/">Security implications fo RSS Parsing</a></h5>
+                            <h5><a href="https://www.openssh.com/">OpenSSH</a></h5>
+                        </section>
                     </div>
                 </div>
             </div>

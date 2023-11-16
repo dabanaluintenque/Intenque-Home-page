@@ -1,7 +1,11 @@
 
 body {
     background-color: whitesmoke;
-    padding: 10%;
+}
+.about_me {
+  /*background-image: url("../../about_me/image/Screenshot\ 2023-11-09\ at\ 3.36.14\ PM.png"); */
+  background-size: cover;
+  padding: 7%;
 }
 #sections {
   font-size: 2em;  
