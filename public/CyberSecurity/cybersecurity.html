@@ -164,7 +164,7 @@
                 </div>
                 <div class="row" style="margin-bottom: 5%;">
                     <div class="col">
-                        <h5>Lunix Commands</h5>
+                        <h5>Linux Commands</h5>
                         <section>
                             <p><b>whois</b> => can be used to lookup domain registration information to try to detect misuse in other cases.<br>
                                 Example: "whois google.com"<br>
@@ -205,19 +205,277 @@
                         </b>
                     </div>
                     <div class="col">
-                        <h5>Windows Commands</h5>
-                        <section>
-
-                        </section>
+                        <h3>Windows Commands</h3>
+                        <ul>
+                            <li>
+                                <p>
+                                    <b>mkdir fileName</b> -> to create a new folder. 
+                                </p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-bottom: 5%;">
                     <div class="col">
                         <h5>Linux Managing Access Controls</h5>
                         <p>
                             <b>How to manage access controls on a Linux server.</b> <br>
                             
                         </p>
+                        <b>
+                            Let's create 4 different new users and grups <br> 
+                            To do this open your linux terminal make sure you login as root. <br>
+                            run this command to login as root in your terminal<br>
+                            "sudo su -" if prompt for passowrd enter your password<br> 
+                        </b>
+
+                        <p>Create users and password <br>
+                            To create a user run this command: "useradd username" <br>
+                            To create the user password run this command: "passwd username"<br>
+                            Example:
+                            <ul>
+                                <li>user 1: <br>
+                                    "useradd Lilica" press enter <br>
+                                    "passwd Lilica" press enter <br>
+                                    <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/lilica.png" alt="user Lilica">
+                                </li>
+                                <li>user 2: <br>
+                                    "useradd Nair" press enter<br>
+                                    "passwd Nair" press enter<br>
+                                    <b>Note: if you see password do not match error just re-type the "passwd username" command</b><br>
+                                    <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/nair.png" alt="user Nair"> 
+                                </li>
+                                <li> user 3: <br>
+                                    "useradd Caio" press enter <br>
+                                    "passwd Caio" press enter <br>
+                                    <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/caio.png" alt="user Caio">
+                                </li>
+                                <li> user 4: <br>
+                                    "useradd Ivair" press enter <br>
+                                    "passwd Ivair" press enter <br>
+                                    <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/ivar.png" alt="user Ivair">
+                                </li>
+                                <li>
+                                    <b>If you want to remove a user run this command: "userdel username</b><br>
+                                    <p>Example: <br> let's create a new username "test" and remove him" <br>
+                                        "useradd test" press enter <br>
+                                        "passwd test" press enter <br>
+                                        "userdel test" press enter <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/test.png" alt="deleted user test">
+                                    </p>
+                                </li>
+                                <b>Create groups</b> <br>
+                                    To create a group run the following command: groupadd groupname<br>
+                                    Example: let's create two groups with the name "managers and hr" <br>
+                                <li>
+                                    "groupadd managers" press enter <br>
+                                    <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/managers.png" alt="group Managers">
+                                </li>
+                                <li>"groupadd hr" press enter <br>
+                                    <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/hr.png" alt="group hr">
+                                </li>
+                            </ul>
+                        </p>
+                        <div>
+                            <h5>Adding the users to groups</h5>
+                            <p>Run this command to add this add user to a group: usermod -aG group_name  username <br>
+                               Example: adding Lilica and Nair to managers group  and Caio and Ivair to hr group<br>
+                               "usermod -aG managers Lilica" press enter <br>
+                               "usermod -aG managers Nair" press enter <br>
+                               <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/managers_list.png" alt="managers list">
+                            </p>
+                            <p>"usermod -aG hr Caio" press enter <br>
+                                "usermod -aG hr Ivair" press enter <br>
+                                <img style="width: 35%; height: 5%; margin-bottom: 3%;"  src="./cyber_images/hr_lists.png" alt="hr list">
+                            </p>
+
+                            <p>Run this commands to verify the group memberships: "id username" <br>
+                                Example: check the what group each user belong <br>
+                                "id Lilica  Nair  Caio  Ivair" press enter <br>
+                                <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/display_group_member.png" alt="display group members"> 
+                            </p>
+                            <p>Run the tail command to displays the last 10 lines of a file. In this case it displays the most <br>
+                                the most recently-created groups: "tail  /etc/group" <br>
+                                Example: "tail  /etc/group" press enter <br>
+                                <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/tail.png" alt="tail command">
+                            </p>
+                        </div>
+                        <div>
+                            <h5>Create directories and files</h5>
+                            <p>
+                                Use the mkdir and touch commands to create directories and files to simulate resources that need to have <br>
+                                permissions applied to them.<br>
+
+                                <ol>
+                                    <li>Run the following commands to create 3 directories:<br>
+                                        mkdir /work <br> 
+                                        mkdir /work/Managerswork<br>
+                                        mkdir /work/Hrwork <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/directory.png" alt="directories">
+                                    </li>
+
+                                    <li>Run the "touch" command. The touch command updates the timestamp on an existing file <br>
+                                        If the specified file does not exist, thouch creates it. <br>
+                                        Example: Create "employees" list file into managerswork folder and "new hire" file into the hr folder. <br>
+                                        "touch /work/Managerwork/employees.txt" <br>
+                                        "touch /work/hrwork/newhire.txt" <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/touch.png" alt="touch command">
+                                    </li>
+                                </ol>
+                            </p>
+                        </div>
+                        <div>
+                            <h5>Ownership Configurations</h5>
+                            <p>By default, who creates a resource owns the resource. We used the root user account to create the directories and files <br>
+                                the root user controls access. So we need to permit users and groups to own the directories and files so that they can <br>
+                                configure permissions. <br>
+
+                                <ul>
+                                    <li>
+                                        Run "ls -ld /work" to display the default permissions on the contents of that directory <br>
+                                        Exmaple: "ls -d /work" press enter <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/ls_ld.png" alt="ls -ls /">
+                                    </li>
+                                    <li>
+                                        Run "chown -R username:groupname /directory name/subdirectory name" cammand to change the ownership <br>
+                                        from root to specific users and group<br>
+                                        Example: <br>
+                                            "chown -R Lilica:managers /work/Managerswork " press enter<br>
+                                            "chown -R Caio:hr /work/Hrwork" press enter <br>
+                                            <b>Note: -R option makes the chown recursive. This applies the ownership and groups settings <br>
+                                                to the directory and everything in it.
+                                            </b> <br>
+                                           <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/chown.png" alt="chown">
+                                    </li>
+                                    <li>
+                                        Run "ls -ld /work/Managerswork" and "ls -ld /work/Hrwork" to display the new ownership <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/show_new_ownership.png" alt="ownership">
+                                    </li>
+                                    <li>
+                                        Run "ls -l /work/Managerswork" and "ls -l /work/Hrwork" to dysplay the user and group associations for the contents <br>
+                                        of these dircetories. <br>
+                                        Example: <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/ls_l_associations.png" alt="ls_l_associations">
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div>
+                            <h5>Permission Configurations</h5>
+                            <p>
+                                Use "chmod" cammand in sysmbolic mode to configure permissions for the resource owner, the associated group, and all others. <br>
+
+                                Syntax example: chmod go+rw file1 adds (+) read and write (rw) to the group and others (go). <br>
+
+                                <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/permissions.png" alt="permissions">                 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5>Windows Server Managing Access Control</h5> 
+                        <p>Run this command "woami /user " to display the Security ID (SID)
+                            Example:
+                            <img style=" margin-bottom: 3%;" src="./cyber_images/win_whoami.png" alt="win_whoami"> <br>
+
+                            Run get-aduser cmdlet to display account information <br>
+                            "get-aduser -identity administrator -properties *" <br>
+                            Example: 
+                            <img style=" margin-bottom: 3%;" src="./cyber_images/getaduser.png" alt="get-aduser">
+                        </p>
+                        <div>
+                            <h5>Manage user, group, and computer objects</h5>
+                            <p>
+                                Active Directory stores and manages objects that represent common entities, <br>
+                                user acounts or computers. <br>
+                                <ul>
+                                    <li>
+                                        Open <b>Server Manager</b> click -> <b>Tools</b> menu, -> select <b>Active Directory Users and Computers</b> <br>
+                                        <img style="width: 35%; height: 5%; margin-bottom: 3%;" src="./cyber_images/active_directory.png" alt="active_directory">
+                                    </li>
+                                    <li>
+                                        Right-click in the domain name "dintenquedeveloper.com" -> seclect <b>New</b> then -> <b>Organizational Unit</b><br>
+                                        <b>Note:</b> Microsoft differentiates between the terms container and organizational unit. An Organizatinal Unit (OU)<br>
+                                        can have Group Policy Object linked to it, (GPO) which results in it being easier and more flexible to manage. <br>
+                                        Containers cannot have linked GPOs and are not typically used for day-to-day Active Directory (AD) administration. <br>
+
+                                        <img style="margin-bottom: 3%;" src="./cyber_images/organizationalUnit.png" alt="organizationalUnit">
+                                    </li>
+                                    <li>
+                                        Right-click in the Organizational unit folder you just created "Developers" -> select <b>New</b> <br>
+                                        -> select <b>User</b> Follow the directions to create a new user. <br>
+                                        <img style="margin-bottom: 3%;" src="./cyber_images/ivairactive.png" alt="Ivair active Directory">
+                                    </li>
+                                    <li>
+                                        Create a global security group inside the "Developers" Organizational Unit (OU). <br>
+                                        Right click in <b>Developers</b> -> <b>New</b> and click <b>Group</b> make sure <b>Gobal and Security</b>
+                                        radio box are check <br>
+                                        <img style="margin-bottom: 3%;" src="./cyber_images/software_group.png" alt="software_group">
+                                    </li>
+                                    <li>
+                                        Then Add the new the user to the security group you just created by right click in <b>user</b>
+                                        -> and click in <b>Add to a group</b> and write the group name. in the box. -> click <b>ok</b><br>
+                                        <img style="margin-bottom: 3%;" src="./cyber_images/addtogroup.png" alt="add to group">     
+                                    </li>
+                                    <li>
+                                        Create new computers organizational Unit object. Righ click the <b>Domain name</b> -> <b>New</b> ->
+                                        <b>Organizational Unit</b>-> then write your computer (OU) name. -> then click <b>OK</b> <br>
+                                        <img style="margin-bottom: 3%;" src="./cyber_images/computers_O_Units.png" alt="computers_O_Units">
+                                    </li>
+                                    <li>Create a new computer account name. Right click in the computer organizational Unit name you created
+                                        -> then select <b>New</b> -> <b>Computer</b> and create new laptop name. -> then click <b>Ok</b> <br>
+                                        <img style="margin-bottom: 3%;" src="./cyber_images/developer_3_laptop.png" alt="developer_3_laptop">
+                                    </li>
+                                    <li>
+                                        To generate a report of all computer objects in the domain.<br>
+                                        Run this command: <b>get-adcomputer  -filter  * | out-file C:\textfile.txt</b> and then <b>enter</b><br>
+                                        <img style="margin-bottom: 3%;"  src="./cyber_images/getReport.png" alt="getReport">
+                                    </li>
+                                </ul>
+
+                            </p>
+                            <div>
+                                <h5>
+                                    Modify an existing Group Policy (GPO) to match password requirements
+                                </h5>
+                                <p>
+                                    Open <b>Server Manager</b>-> <b>Tool</b> -> <b>Group Policy Management</b>-> expand <b>Forest</b> -> <b>Domains</b> ->
+                                    expand <b>your domain name</b> -> right click in <b>Default Domain Policy</b> -> <b>Edit</b> -> <b>Computer Configuration</b> ->
+                                    <b>Policies</b> -> <b> Windows Settings</b> -> <b>Security Settings</b>-> <b>Account Policies </b> -> double click in <b>Password Policy</b> <br>
+                                    Click in each policy to make change as you wish. <br>
+
+                                    After you finished. run powerShell window as administrator. To produce a report of the password
+                                    policy settings to updating configuration documentation: 
+                                    Run this command: <b>gpresult  /H  C:\passwords-gpresults.html</b>
+
+                                    
+                                    <ul>
+                                        <h5>How to Enabled or Disabled Guest account, display or not display the user name of the last user to log on,
+                                            also, how to display a title and message on a server, or how to not require CTRL+ALT+DEL ?
+                                        </h5><br>
+                                        <li>
+                                            Open <b>Server Manager</b> -> <b>Tools</b> from the list select -> <b>Group Policy Management</b> -> expand <b>Forest</b> -> expand <b>Domains</b>
+                                            -> expand your <b>Domain name</b> -> right click in <b>Default Domain Policy</b>-> select <b>Edit</b> -> expand <b>Computer Configuration</b> ->
+                                            expand <b>Policies</b> -> expand <b>Windows Settings</b> -> expand <b>Security Settings</b> -> expand <b>Local Policies</b> -> click in <b> Security Options</b>
+                                            <ol>
+                                                <b>Double click in either one of those to enable or disable</b><br>
+                                                <li>Accounts: Guest account status</li>
+                                                <li>Interactive logon: Don't display last signed-in</li>
+                                                <li>Interactive logon: Message text for users attempting to log on</li>
+                                                <li>Interactive logon: Massage title for users attempting to log on</li>
+                                                <li>Interactive logon: Do not require CTRL+ALT+DEL</li>
+                                            </ol>
+                                            
+                                           After you done run this command twice as Administrator: in powerShell <br>
+                                           <b>gpupdate /force</b> <br>
+                                           then run this one <br>
+                                           <b>gpresult /H C:\Users\Administrator\Desktop\GPreport.htm</b>
+
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                                
                     </div>
                 </div>
                 <div class="row">
@@ -275,7 +533,7 @@
                             <li><h5>API: <small>Application Programming Interface</small></h5></li>
                             <li><h5>SID:  <small>security identifier</small></h5></li>
                             <li><h5>GPOs: <small>Group Policy Objects</small></h5></li>
-                            <li><h5>UN: <small>Organizational Units</small></h5></li>
+                            <li><h5>OU: <small>Organizational Units</small></h5></li>
                             <li><h5>AD: <small>Active Directory</small></h5></li>
                             <li><h5>ISP: <small>Internet Service Provider</small></h5></li>
                             <li><h5>OS:<small>Operating System</small></h5></li>
@@ -342,10 +600,6 @@
                             <li><h5>OT: <small>Operation Technology</small></h5></li>
                             <li><h5>BGP: <small> Border Geteway Protocol</small></h5></li>
                             <li><h5>CARP:<small> Common Address Redundancy Protocol</small></h5></li>
-                        </ol>
-                    </div>
-                    <div class="col">
-                        <ol start="81">
                             <li><h5>A/P: <small>Active/Passive</small></h5></li>
                             <li><h5>A/A: <small>Active/Active</small></h5></li>
                             <li><h5>FIFO: <small>First In First Out</small></h5></li>
@@ -397,6 +651,84 @@
                             <li><h5>SFTP: <small> Secure File Transfer Protocol</small></h5></li>
                             <li><h5>NOS: <small>Network Operating System</small></h5></li>
                             <li><h5>SPN: <small> Service Principal Name</small></h5></li>
+                            <li><h5>RoT: <small>Hardware Root of Trust</small></h5></li>
+                            <li><h5>KMIP: <small>Key Management Interoperability Protocol</small></h5></li>
+                            <li><h5>UEFI: <small>Unified Extensible Firmware Interface</small></h5></li>
+                            <li><h5>PCRs:  <small>Platform Configuration Registers</small></h5></li>
+                            <li><h5>KEK: <small>Key Encryption Key</small></h5></li>
+                            <li><h5>SED: <small>Self-Encrypting Drivers</small></h5></li>
+                            <li><h5>FDE: <small> Full Disk Encryption</small></h5></li>
+                            <li><h5>HDDs: <small>Hard Disk Drivers</small></h5></li>
+                            <li><h5>SSDs: <small>Solid State Drivers</small></h5></li>
+                            <li><h5>OEMs <small> Original Equipment Manufacturers</small></h5></li>
+                            <li><h5>EOL: <small>End of Life</small></h5></li>
+                            <li><h5>EOSL: <small>End of Service Life</small></h5></li>
+                            <li><h5>MSA:<small> Measurement Systems Analysis</small></h5></li>
+                            <li><h5>SLA: <small> Service Level Agreement</small></h5></li>
+                            <li><h5>BPA: <small>Business Partnership Agreement</small></h5></li>
+                            <li><h5>MOU: <small>Memorandum Of Understanding</small></h5></li>
+                            <li><h5>MBSA: <small> Microsoft Baseline Security Analyzer</small></h5></li>
+                            <li><h5>HIPS: <small> Host-Based Intrusion Prevention Systems</small></h5></li>
+                            <li><h5>CME: <small> Common Malware Enumeration</small></h5></li>
+                            <li><h5>RTOS: <small> Real-Time Operating Systems</small></h5></li>
+                            <li><h5>ASICs: <small> Application-Specific Integrated Circuits</small></h5></li>
+                            <li><h5>FPGA: <small>Field Programmable Gate Array</small></h5></li>
+                            <li><h5>SoC:<small> System on Chip</small></h5></li>
+                            <li><h5>PLC: <small> Programmable Logic Controller</small></h5></li>
+                            <li><h5>LTE: <small> Long Term Evolution or 4G</small></h5></li>
+                            <li><h5>NB-loT <small> Narrowband-loT</small></h5></li>
+                            <li><h5>SIM: <small> subscriber identity module</small></h5></li>
+                            <li><h5>HVAC: <small> Heating, Ventilation, Air, Conditioning</small></h5></li>
+                            <li><h5>SCADA: <small>Supervisory, Control, and, Data, Acquisition</small></h5></li>
+                        </ol>
+                    </div>
+                    <div class="col">
+                        <ol start="161">
+                            <li><h5>HMIs:<small> Human-machine Interfaces</small></h5></li>
+                            <li><h5>DCS: <small> Distributed Conrol System</small></h5></li>
+                            <li><h5>ICSs: <small>Industrial Control Systems</small></h5></li>
+                            <li><h5>M2M: <small> Machine to Machine</small></h5></li>
+                            <li><h5>PACS: <small> Physical Access Control System</small></h5></li>
+                            <li><h5>XSS: <small> Cross-site Scripting</small></h5></li>
+                            <li><h5>BAS: <small> Building Automation System</small></h5></li>
+                            <li><h5>VoIP: <small> Voice Over IP</small></h5></li>
+                            <li><h5>MFPs: <small> Multifunction Printers</small></h5></li>
+                            <li><h5>UAV: <small> Unmanned aerial Vehicles</small></h5></li>
+                            <li><h5>ECU: <small> Electronic Control Unit</small></h5></li>
+                            <li><h5>CAN: <small> Conroller Area Network</small></h5></li>
+                            <li><h5>OBD-II <small> Onboard Diagnostics</small></h5></li>
+                            <li><h5>PHI: <small> Protected Health Information</small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
+                            <li><h5> <small></small></h5></li>
                             <li><h5> <small></small></h5></li>
                             <li><h5> <small></small></h5></li>
                             <li><h5> <small></small></h5></li>
@@ -421,6 +753,26 @@
                             <h5><a href="https://blog.cloudflare.com/secure-time/">Network Time Security</a></h5>
                             <h5><a href="https://mikeknoop.com/lxml-xxe-exploit/">Security implications fo RSS Parsing</a></h5>
                             <h5><a href="https://www.openssh.com/">OpenSSH</a></h5>
+                            <h5><a href="https://superuser.com/questions/1560393/cant-ping-between-guest-machines-virtualbox-macos-host">How to ping between to machines Virtualbox MacOS Host</a></h5>
+                            <h5><a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794805(v=ws.10)">Rename a Domain Controller</a></h5>
+                            <h5><a href="https://www.google.com/search?q=how+to+connect+a+virtual+box+windows+to+a+server+2019+domain+controller&sca_esv=584934822&rlz=1C5CHFA_enUS920US920&ei=4c9fZZqwOOKgptQP3b0F&ved=0ahUKEwjapKTOk9uCAxVikIkEHd1eAQAQ4dUDCBE&uact=5&oq=how+to+connect+a+virtual+box+windows+to+a+server+2019+domain+controller&gs_lp=Egxnd3Mtd2l6LXNlcnAiR2hvdyB0byBjb25uZWN0IGEgdmlydHVhbCBib3ggd2luZG93cyB0byBhIHNlcnZlciAyMDE5IGRvbWFpbiBjb250cm9sbGVySPKUAVDVUliDkwFwBXgBkAEBmAG_BKAB_xKqAQk5LjYuMi41LTG4AQPIAQD4AQHCAgoQABhHGNYEGLADwgIFECEYoAHCAgUQIRirAsICBxAhGKABGAriAwQYACBBiAYBkAYI&sclient=gws-wiz-serp#fpstate=ive&vld=cid:0a386bc6,vid:5M_zJaeNQTw,st:0">How to Join a Client PC to an AD</a></h5>
+                            <h5><a href="https://www.youtube.com/watch?v=mMQ3e7jMsRA"> How to make VirtualBox Virtual Machine in Full Screen</a></h5>
+                            <h5><a href="https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process"> Secure the Windows boot process</a></h5>
+                            <h5><a href="https://wiki.ubuntu.com/UEFI/SecureBoot"> Ubuntu Secure Boot</a></h5>
+                            <h5><a href="https://www.theverge.com/2019/8/15/20807854/apple-mac-lightning-cable-hack-mike-grover-mg-omg-cables-defcon-cybersecurity">A researcher made a Lightning cable that can hack your computer</a></h5>
+                            <h5><a href="https://learn.microsoft.com/en-us/lifecycle/faq/windows"> The Support Status for a particular version of Windows</a></h5>
+                            <h5><a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack?t=1631031433646"> A Worst Nightmare Cyberattack: The Untold Story Of The SolarWinds Hack</a></h5>
+                            <h5><a href="https://www.gartner.com/en/documents/3848470"> Gartner Magic Quadrant for Endpoint Protection Platforms</a></h5>
+                            <h5><a href="https://www.digitalguardian.com/blog/what-managed-detection-and-response-definition-benefits-how-choose-vendor-and-more"> What is Managed Detection and Response? Definition, Benefits, How to Choose a Vendor, and More</a></h5>
+                            <h5><a href="https://www.sophos.com/en-us/content/synchronized-security"> Synchronized Security (SOPHOS)</a></h5>
+                            <h5><a href="https://www.arduino.cc/"> Arduino</a></h5>
+                            <h5><a href="https://www.raspberrypi.org/">Raspberrypi</a></h5>
+                            <h5><a href="https://www.checkpoint.com/"> Check point</a></h5>
+                            <h5><a href="https://www.wired.com/2014/11/countdown-to-zero-day-stuxnet/">An Unprecedented Look at Stuxnet, The World's First Digital Weapon</a></h5>
+                            <h5><a href="https://wmx-api-production.s3.amazonaws.com/courses/5731/supplementary/NIST.SP.800-82r2.pdf"> Guide to Industrial Control Systems (ICS), Supervisory Control and Data Acquisition (SCADA) Security</a></h5>
+                            <h5><a href="https://wmx-api-production.s3.amazonaws.com/courses/5731/supplementary/667512.pdf"> Federal Facility Cybersecurity</a></h5>
+                            <h5><a href="https://www.shodan.io/"> Shodan Search Engine for the Internet of Everything</a></h5>
+                            <h5><a href="https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway/">Hackers Remotely Kell a Jeep on the Highway</a></h5>
                         </section>
                     </div>
                 </div>
