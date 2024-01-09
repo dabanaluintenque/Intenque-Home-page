@@ -1,0 +1,73 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Dabana's toturail</title>
+
+        <link rel="stylesheet" href="../stylesheets/deployment/awss3.css"/>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1>
+                    <b>
+                        DEPLOY A REACT STATIC WEBSITE TO AWS S3 BUCKET
+                    </b>
+                </h1>
+                <ol>
+                    <h3>Build project</h3>
+                    <li>
+                        run: npm build <br>
+                        this should create a new folder inside your project call "build"
+                    </li>
+                    <h3>Navigate to your aws page</h3>
+                    <li>create a new S3 bucket</li>
+                    <p>Follow the instruction on the page and Uncheck the "Block all public access" and the bottom of the Page
+                        check the "acknowledge" box. and leave everything as default and click "create bucket"
+                    </p>
+                    <h3>Uploud the build file you created in the step 1</h3>
+                    <li>
+                        click on the bucket name you created <br>
+                        -> select "Upload" and upload the files from your local computer <br>
+                        Example: in my case I open the build filer and I upload "index.html" file and "static" folder <br>
+                        scroll down and click upload, and on the top right corner of the page click close
+                    </li>
+                    <h3>Set Properties</h3>
+                    <li>
+                        on the top menu select "Properties" <br>
+                        -> scroll to the bottom of the page and where it says "Static website hosting" click "Edit"  change to "Enable" 
+                        and under the index document form write "index.htm" <br> the Error document is optional you can write index.html it's up to you if you 
+                        have an error folder set up
+                    </li>
+                    <h3>Give permissions and create a new pollicy</h3>
+                    <li>
+                        On the top menu select "Permissions" <br>
+                        -> scroll down to bucket policy and click "Edit"  on the right click "Add new statement" button on the 
+                        search bar write "s3" and click s3 new s3 policy will the be created on the right. 
+                        again on the search bar in the left search for "getObject" check the box. 
+                        Then scroll down to <br>
+                        <b>2. Add a resource</b> and select <b>Add</b> you should see s3 under the service
+
+                        and under the <b>Resource type</b> select <b>object</b> ->
+                        under the <b>Resource ARN</b> write the name of your bucket/* <br>
+                        Example: my is "arnawss3:::sunflower.com/*" <br> and click <b>Add Resource</b> <br>
+
+                        <p>
+                            On the right side of the screen on the JSON policy on 
+                            field that says <b>"Principal": {},</b> change it to <b>"Principal": "*",</b> <br>
+                            Scroll to the bottom of the and click <b>Save changes</b>
+                        </p>
+                    </li>
+                    <h3>Open your static website into the browser</h3>
+                    <li>On the top menu select <b>Properties</b>
+                        -> scroll all the way to the bottom you should see an http// link created for your project there. Click that link. 
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

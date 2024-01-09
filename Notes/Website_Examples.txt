@@ -4,4 +4,18 @@
 
 3 ) Shane Kinennon https://www.shanekinkennon.com/
 
+4 ) Adding Static react website to AWS S3 buket 
+    https://www.youtube.com/watch?v=7djMZ5OTG_E
+
+5 ) How to Connect Godaddy Domain with Amazon Route 53 
+https://www.youtube.com/watch?v=RI8oy-HGkIQ
+
+6) Sync the route 53 https://www.youtube.com/watch?v=WvgQb-tX6Kk
+
+7) Google Css Font 
+https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css
+
+
+
+
 
