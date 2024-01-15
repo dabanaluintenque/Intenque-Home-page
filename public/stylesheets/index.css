@@ -1,21 +1,79 @@
 
 
 @media only screen and (max-width: 600px) {
-    .name{
-        font-size: 3rem;
-        
 
+
+    #mainMenu {
+        position: fixed;
+        top:5%;
+        text-align: center;
+        width: 100%;
+        font-weight: bolder; 
+        padding-right: 70%;
     }
-     #video, #facts {
+
+    #video, #facts {
         background-color: black;
     }
+    .bugImage, .youtubeVideo {
+        width: 300px;
+        height: 450px;
+    }
+
+    .name {
+        font-size: 50px;
+        background-color: black;
+        margin: 0;
+        position: absolute;
+        top: 70%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+        color: white;
+        width: 100%;
+        padding-top:90%;
+        padding-left: 20%;
+        padding-bottom:95%;
+        background-image: url('../images/Chicago\ pic.JPG');
+        opacity: 1;
+        z-index: -1;
+    }
+
 }
 
 @media only screen and (min-width: 576px){
-    .name{
-            font-size: 1rem;
-            background-color: black;
+
+    #mainMenu {
+        position: fixed;
+        top:0%;
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-left: 20%;
+        padding-right: 20%;
+        font-weight: bolder;
     }
+
+    .name {
+        font-size: 3em;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+        color: white;
+        width: 100%;
+        padding-top:90%;
+        padding-left: 30%;
+        padding-bottom:95%;
+        background-color: black;
+        opacity: .7;
+        z-index: -1;
+    }
+
     #facts {
         background-color: black;
     }
@@ -25,26 +83,55 @@
         
     }
 
+    .bugImage, .youtubeVideo {
+        width: 500px;
+        height: 600px;
+    }
 }
 @media only screen and (min-width: 768px) {
-    .name{
-        font-size: 2rem;
-        
+
+    #mainMenu {
+        position: fixed;
+        top:0%;
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-left: 20%;
+        padding-right: 20%;
+        font-weight: bolder;
+    }
+
+    .bugImage, .youtubeVideo {
+        width: 500px;
+        height: 600px;
+    }
+
+    .name {
+        font-size: 5em;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+        color: white;
+        width: 100%;
+        padding-top:90%;
+        padding-left: 27%;
+        padding-bottom:95%;
+        background-color: black;
+        opacity: .7;
+        z-index: -1;
     }
 }
 @media only screen and (min-width: 992px) {
-    .name{
-        font-size: 3rem;
-    }
+
 }
 @media only screen and (min-width: 1200px) {
 
 }
-body {
-    
-}
-#myname {
-    /*background-color: black;*/
+/*#mainMenu {
     position: fixed;
     top:0%;
     text-align: center;
@@ -57,7 +144,7 @@ body {
     opacity: .7;
     font-weight: bolder;
 
-}
+}*/
  /*@keyframes  mymove {
     from {left: 0px;}
     to {right: 50px;}
@@ -80,8 +167,7 @@ body {
     display:block;
     background-color: black;
     color: white;
-    transform: scale(1);
-    
+    transform: scale(1);  
  }
  .dropdown-menu a{
  text-decoration: none;
@@ -96,7 +182,7 @@ body {
     min-height: 100%;
     z-index: -1;
 }
-.name {
+/*.name {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -113,7 +199,7 @@ body {
     background-color: black;
     opacity: .7;
     z-index: -1;
-}
+} */
 
 .fw-bolder {
     color: white;
