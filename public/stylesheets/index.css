@@ -230,23 +230,28 @@
 .fa-address-card {
     font-family: 'Times New Roman', Times, serif;
 }
-#facts {
+.facts {
     text-align: left;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     padding-top: 5%;
     text-align: center;
+    background-color: azure;
+    color: black;
 }
-#video{
+.video{
     padding-top: 5%;
+    padding-bottom: 5%;
     text-align: center;
+    background-color: azure;
+    width: 100%;
+    color: black;
 
 }
 #videoAndfacts{
     color: white;
     position: absolute;
     top: 100%;
-    background-color: black;
     width: 100%;
     height: 100%;
 }
