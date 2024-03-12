@@ -127,6 +127,9 @@ let day92 = timeTracker(20,17,21,29);
 let day93 = timeTracker(19,50,21,23);
 let day94 = timeTracker(20,14,21,20);
 let day95 = timeTracker(19,40,21,40);
+let day96 = timeTracker(10,40,16,40);
+let day97 = timeTracker(10,32,18,52);
+let day98 = timeTracker(3,55,4,55);
 
 let number_of_days =[];
 number_of_days.push(day1);
@@ -227,6 +230,9 @@ number_of_days.push(day92);
 number_of_days.push(day93);
 number_of_days.push(day94);
 number_of_days.push(day95);
+number_of_days.push(day96);
+number_of_days.push(day97);
+number_of_days.push(day98);
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
@@ -326,6 +332,9 @@ const day92Time = document.getElementById('day92').innerHTML = convert_to_time_f
 const day93Time = document.getElementById('day93').innerHTML = convert_to_time_format(number_of_days[95]);
 const day94Time = document.getElementById('day94').innerHTML = convert_to_time_format(number_of_days[96]);
 const day95Time = document.getElementById('day95').innerHTML = convert_to_time_format(number_of_days[97]);
+const day96Time = document.getElementById('day96').innerHTML = convert_to_time_format(number_of_days[98]);
+const day97Time = document.getElementById('day97').innerHTML = convert_to_time_format(number_of_days[99]);
+const day98Time = document.getElementById('day98').innerHTML = convert_to_time_format(number_of_days[100]);
 
 function totalHoursInStudy(){
     
