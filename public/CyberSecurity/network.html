@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Network +</title>
+    </head>
+    <body style="margin: 5%">
+        <h1 style="text-align: center; ">Wellcome to Newtwork + N10-008 </h1>
+        <div>
+            <h3>Open Systems Interconnection Model</h3>
+            <ol>
+                <li>Physical</li>
+                <li>Data Link</li>
+                <li>Networ</li>
+                <li>Transport</li>
+                <li>Session</li>
+                <li>Presentation</li>
+                <li>Application</li>
+            </ol>
+            
+        </div>
+        <div>
+            <h3>Network Data Transmission</h3>
+            <p><b>Copper Cable</b><br>
+                Copper Cable is used to transmit electrical signals. The cable between two nodes creates a low voltage electrical circui betwwen the interfaces on the nodes.
+                <b>There are two main types of copper cabel:</b> twisted pair and coaxial (coax). <b>Copper cable</b> suffers from high attenuation, 
+                meaning that the signal quickly loses strength over long links. <b>Twisted pair cable</b> is rated to Category (Cat) standards. 
+            </p>
+            <p><b>Fiber Optic Cable</b> <br>
+                Fiber Optic cable carries very high frequency radiation in the infrared light part of the electromagnetic spectrum. 
+                <b>fiber optic cable supports higher bandwidth over longer links than copper cable. Fiber optic cabling is divided
+                   into Single Mode (SMF) and MultiMode (MMF) types,
+                </b> 
+                MMF is categorized by Optical Mode designations (OM1, OM2, OM3, and OM4).
+            </p>
+        </div>
+        <div>
+            <h3>Ethernet Standards / Media Access Control and Collision domains</h3>
+             <b>Ethernet</b> is a multiple access area network, which means that the available communications capacity is shared betwwen 
+             the nodes that are connected to the same media. <br>
+             <b>Ethernet uses</b> a contention-based MAC system. Each network node connected to the same media is in the same <b>Collision 
+                domain.
+             </b> When two nodes transmit at the same time, the signals are said to collide and neither signal can reach its destination. <br>
+             The Ethernet protocol governing contention and media access <b>is called Carrier Sense Multiple Access with Collision Detection
+             (CSMA/CD).
+             </b> <br>
+             <b>The collision detection mechanism means that</b> only half-duplex transmisions is possible. <br>
+             <b>In the 10BASE-T wiring topology</b> each node is cabled to an Ethernet hub. The 10BASE-T standard dates from 1990.
+        </div>
+        
+        <div>
+            <h3>100BASE-TX Fast Ethernet Standard</h3>
+            <b>The Fast Ethernet standard users the </b> The same CSMA/CD protocol as 10BASE-T. <br>
+            100BASE-TX refers to Fast ethernet working over Cat 5 ( or better) twisted pair copper cable with a maximum 
+            supported link lenght of 100 meters (328 feet).
+        </div>
+        <div>
+            <h3>Linux Command</h3>
+            <p>show Ipv4 address:  <b>ip addr show eth1</b></p>
+            <p>establish remote SSH connection: <b>ssh root@192.168.1.1</b></p>
+            <p>display basic network information about the router: <b> uci show network</b></p>
+            <p>display IP address information: <b>ifconfig</b></p>
+
+        </div>
+    </body>
+    
+</html>

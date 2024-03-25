@@ -13,31 +13,366 @@
             <h1 style="text-align: center; margin: 3%">CySA+ Tutorial</h1>
             <div class="row">
                 <div class="col">
-
+                    <h3>Security Operations Learning Objectives</h3>
+                    <p>
+                        <b>
+                            Explain the importance of system and network architecture
+                            concepts in security operations.
+                        </b> <br>
+                        <b>
+                            Given a scenario, analyze indicators of potentially malicious
+                            activity.
+                        </b><br>
+                        <b>
+                            Gevin a scenario, use appropriate tools or techniques to determine 
+                            malicious activity. 
+                        </b><br>
+                        <b>
+                            Compare and contrast threat-intelligence and threat-hunting concepts.
+                        </b><br>
+                        <b>
+                            Explain the importance of efficiency and process improvement in 
+                            security operations. 
+                        </b>
+                    </p>
+                    
                 </div>
             </div>
+            <div>
+                <h3>
+                    Infrastructure Concepts
+                </h3>
+                <p>
+                    <b>
+                        Serverless <br>
+                    </b>
+                    Event - Driven Orchestration
+                </p>
+                <p>
+                    <b>
+                        Virtualization <br>
+                        
+                    </b>
+                    For virtualization you pay-as-you-go. <br>
+                    It is someone else computer. We no longer have to depend on premise type of hardware. <br>
+                    It, give of the scalability, resilient and fault tolerant. <br>
+                    Snapshots / Backup
+                    
+                </p>
+                <p>
+                    <b>
+                        Containerization
+                    </b> <br>
+                    container runs code perform processing, then destroys itself.<br>
+                    Example:
+                        AWS Lambda and microsoft Azure Serverless.
+
+                </p>
+                <p>
+                    <b>Note: Billing</b> is based on execution time rather than hourly charges. 
+
+                </p>
+                <p>
+                    <b>Building blocks for the Clouds</b> <br>
+                        compute, Network, Storage. 
+
+                </p>
+            </div>
+
+
+            <div>
+                <h3>
+                    Network Architecture 
+                </h3>
+                <p>
+                    <b>
+                        On-Premises
+                    </b><br>
+                     Your monalitic type architecture it design by you and control by your organization. <br>
+                     Skilled employees, More Control, Less Resiliency.<br>
+                     Things on your responsability. HVAC, Power, $Cost . You will Need Alternate Operating Site. <br>
+                     Cold: No ready <br>
+                     Work: somewhere in the middle <br>
+                     Hot: Ready to go. 
+
+                </p>
+                <p>
+                    <b>
+                        Cloud 
+                    </b> <br>
+
+                        The three basic claud deployment models. <br>
+                        Public: Everything is in the cloud. Are the one you can sign up free and get. Ex: GDrive, Gmail, Workspace <br>
+                        Private: Design build and manage in house by the organization. Ex: VPC, Hyper-V, OpenStack, VCenter, ISXi <br>
+                        Hybrid: Combination of both Public and Privite. is the best of both.<br>
+                        <b>Cloud Technology Drives <br>
+                        Network Deperimterization
+                        </b><br>
+                        On - Premesis, Hybrid Cloud Platforms, Remote Work, Mobile, Outsourcing Contracting vendors service providers, Wi-Fi 
+                        (Evil Twin or Rogue Access Point (AP))
+                </p>
+                <p>
+                    <b>
+                        Hybrid 
+                    </b><br>
+                        Another term is Multicloud environment. Multiple CSP (Cloud service providers).<br>
+                        Hight availability! can offer, hot, warm, and cold.
+                </p>
+                <p>
+                    <b>
+                        Network Segmentation
+                    </b><br>
+                    You have public portion of the environment and you put Demilitarized zone (DMZ). To control between the external and internal.
+                </p>
+                <p>
+                    <b>
+                        Zero Trust Architecture (ZTA)
+                    </b><br>
+                    <a href="https://csrc.nist.gov/pubs/sp/800/207/final">Zero Trust Architecture (NIST)</a>
+                    National Institute Standard Technology (NIST). Special Publication SP 800-207. Assumes that nothing should be taking for granate,
+                    Taking away old way of thinking, and fucos on new way of thinking which is focus on users. Everytime user swith the device they need 
+                    to re-authenticate. <br>
+                    Benefits of Zero Trust Architecture (ZTA)<br>
+                    Security, Access Control, Governance, Risk, Compliance, Granuality.<br>
+                    Compenent of ZTA <br>
+                    Visibility, Network and Endpoint Security controls.<br>
+                    IAM (Identity Access Manachement) => Only verify user can have access <br>
+                    Policy-based enforcement Intrusion Detection System, Intrusion Preventin (IDS/ IPS)
+
+
+                </p>
+                <p>
+                    <b>
+                        (SASE) Secure Access Secure Edge
+                    </b><br>
+                    Micro Segmentation critical level of isolation, it combine the secury access platform. It provides end-to-end-access. It a combination
+                    of wide area of network. <br>
+                    (CASB) Cloud Access Security Broker, Firewall as a Service (FwaaS)
+                </p>
+                <p>
+                    <b>
+                        (SDN) Software Defined Networking
+                    </b><br>
+                    It is a abstract model to define how a network operates, it also comes with automation. It can replece physical items with virtual control.
+                    <b>3 planes</b> <br>
+                    Control, make the decision how the traffic are routed. <br>
+                    Data, Facilitate the ACS's <br>
+                    Management: Were you can Monitor
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Logging
+                </h3>
+                <p>
+                    <b>
+                        Aggregation 
+                    </b> <br>
+                    Insight of what happen whithin your environment. Pull all the logs. Associate with (SIEM) => Splunk.
+                    <b>
+                    (Coorelation)
+                    </b>
+                    Mean we putting all the logs together.
+
+                </p>
+                <p>
+                    <b>
+                        Time Synchronization
+                    </b> <br>
+                    <b>
+                    NTP (Network Time Protocol)
+                    </b>
+                    System time and reference to time source. Atomic clock or GPS.
+                </p>
+                <p>
+                    <b>
+                        Logging Levels
+                    </b> <br>
+                     It can help you sort and filter. Debugging, informative warning, Indicate Potential, problem, error serious, critical issues.<br>
+                     <b>Syslog has 8 levels</b> <br>
+                     0 = Emergency <br>
+                     1 = Alert <br>
+                     2 = Critical <br>
+                     3 = Error <br>
+                     4 = Warning <br>
+                     5 = Serious <br>
+                     6 = Information <br>
+                     7 = Debug
+                     <p>
+                        There is another logging level call TRACE <br>
+                        Very detailes debug information. 
+                     </p>
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Operating System Concepts
+                </h3>
+                <p>
+                    <b>
+                        Windows Registry
+                    </b><br>
+                    <b>5 Root Keys of Windows Registry</b><br>
+                    1. HKey_Local_Machine or HKLM <br>
+                    2. HKey_Users or HKU<br>
+                    3. HKey_Current_User or HKCU <br>
+                    4. HKey_CLASSES_ROOT or HKCR<br>
+                    5. HKey_CURRENT_CONFIG or HKCC <br>
+                    Registry Database is Binary File = HIVE (.Log, .SAV, .ALT) => all this are save in C:\Windows\System32\Config
+
+                </p>
+                <p>
+                    <b>
+                        System Hardening
+                    </b><br>
+                    <a href="https://www.cisecurity.org/cis-benchmarks">CIS benchmarks</a><br>
+
+                    Making a system go from a default configuration to make it more secure. Disabling guest user account and ports that are not in use.
+                </p>
+                <p>
+                    <b>
+                        File Structure
+                    </b>
+                      
+                    - Configuration File Location <br>
+                     <b>Windows Files</b> <br>
+                    (NTUSER.DAT) => it's a user profile which can be store localy <br>
+                    SAM (Securty Accounts Manager)<br>
+                    Security = Domain Settings <br>
+                    Software = Settings for OS <br>
+                    System = Drivers and file system <br>
+                    Default = Local System Account profile <br>
+                    <b>Linux File</b><br>
+                    /etc, /usr, /log,  /var
+                </p>
+                <p>
+                    <b>
+                        System Processes
+                    </b> <br>
+                    Anty Virus, defragment, user authentication, System
+                </p>
+                <p>
+                    <b>
+                        Hardware Architecture
+                    </b><br>
+                    (x86 = 32 bit , x64 = 64 bit) => Are for desktop, Laptop, servers<br>
+                    ARM => SmartPhone, Tablets, or single bord architecture. <br>
+                    One cannot run on the other without of the emulater.
+                </p>
+            </div>
+
+            <div>
+                <h3>
+                    Identity and Acces Management
+                </h3>
+                <p>
+                    <b>
+                        Multi-Factor Authentication (MFA)
+                    </b><br>
+                    A way to prove you say you are, by something you have, something you are, something you know.
+                </p>
+                <p>
+                    <b>
+                        Single Sign-On (SSO)
+                    </b><br>
+                    Authentication process that allow a single user access to multiple systems, apps, websites. Single set of Credentials. By authenticating one time.
+                </p>
+                <p>
+                    <b>
+                        Federation
+                    </b><br>
+                    - OpenID <br>
+                    - Transitive trust (if A trust B and C then trust A) <br>
+                    - Shibboleth: <br>
+                     Is a federated identity method, which is based on <b>SAML</b> (Secure access, markup language). It's Often used by universities, 
+                     Colleges, or public service organizations. Where user attent to retribute resources from a website and that website sends <b>SAML</b>
+                     authentication information over URL queries. Then the user is redirected to an identiy provider with which they can authenticate using
+                     the <b>SAML</b> information. <br>
+                     It's a different way of accomplishing the samething as OpenID process.
+                </p>
+                <p>
+                    <b>
+                        Privileged Access Management (PAM)
+                    </b><br>
+                    Refers to the use of people, application, services, processes, and technology to control, secure, monitor, and audit identities. Allow you track
+                    who access what. Greater awareness and visibility into credentials used in our environment.
+                </p>
+                <p>
+                    <b>
+                        Passwordless
+                    </b><br>
+                    It's a type of the authentication method where users can access an account without entering a password. It relies on one of the other identity
+                    mechanisms in multi-factor authentication. <br>
+                    Here you can only use semething that you are, like biometric data, or something that you have, one time Code.
+                </p>
+                <p>
+                    <b>
+                        Cloud Access Security Broker (CASB)
+                    </b><br>
+                    <a href="https://www.broadcom.com/products/cybersecurity/information-protection/data-loss-prevention-cloud/cloud-application-security-cloudsoc">Cloud SOC CASB</a> <br>
+                    Enterprise management software that is designed to mediate access to the cloud. <br>
+                    CASB can enable SSO, it can enforce access control and what to do when authenticate, scan the device. <br>
+                    There's three way that <b>CASB</b> is implemented into an environment. <br>
+                    1. Forward Proxy:  client Network Edge <br>
+                    2. Reverse Proxy: Cloud Network Edge <br>
+                    3. API (Application Programming Interface) 
+
+                </p>
+            </div>
+
+            <div>
+                <h3> Profiling Tactics, Techniques, and procedures (TTP)</h3>
+                    <a href="https://cve.mitre.org/">CVE  Mitre </a>
+                <p>
+                    - Describe the actions of the adversary / group  <br>
+                    - The specific activity <br>
+                        . DDoS attach / ransomware <br>
+                        . Credential harvesting / Advance Persistent Threat (APT) <br>
+
+                    <b>Indicator</b> <br>
+                     - How to recognize what the actions themselves look like <br>
+                     - Specific patterns 
+                        . Comand and Control (C2) infrastructure with Internet Protocol (IP) address <br>
+                        . Malware behavior <br>
+                        . Timestamps <br>
+                        . Media Access Control (MAC) addresses
+                </p>
+            </div>
+
+            <div>
+                <h3>Encryption</h3>
+                <p>
+                    <b>
+                        Public Key Infrastructure (PKI)
+                    </b><br>
+                    It's about public / Private Key Management, Integrity checks, Digital Signatures, Authentication, Users and Devices. <br>
+                    - Non-Repudiation <br>
+                    - Cryptographic Services, compliance -> Policy Regulatory, <br>
+                    - Stablish the Root of Trust => Certificate Authority (CA). <br>
+                    - When Certificate expire they need to be added to Certificate Revocation List (CRL). They are loaded into the browser. <br>
+                    - Hardware Security Module (HSM) stores secrets in the hardware. <br>
+                    - Digital Certificate is the foundation to stablish Hypertext transfer Protocol Secure (HTTPS).
+        
+                </p>
+                <p>
+                    <b>
+                        Secure Sockets Layer (SSL) Inspection
+                    </b><br>
+                        -Secure Sockets Layer Inspection (SSLI), It's the process of inspecting encrypted web traffic. <br>
+                        - SSL inspection is essential for verifying that website certificate are valid, help protecting against On Path attack 
+                        (Men In The Middle). <br>
+                        - Aceptable Use Policy (AUP)
+                </p>
+            </div>
+
             <div class="row">
                 <h3 style="text-align: center; margin: 3%;" >Words and meanings</h3>
                 <ol>
                     <li><h5>APT: <small>Advanced Persistent threat </small></h5></li>
                     <li><h5>ATT&CK: <small>Adversarial Tactics Techniques and Common Knowledge</small></h5></li>
-
                     <li><h5>C2: <small>Command Control </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
                     <li><h5>UEBA: <small>User Entity Behavior Analytics </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
                     <li><h5>TTP: <small>Tactics Techniques Procedure </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
-                    <li><h5> <small> </small></h5></li>
                 </ol>
             </div>
             <div class="row">
