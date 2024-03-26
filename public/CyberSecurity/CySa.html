@@ -9,6 +9,12 @@
         />
     </head>
     <body>
+         <style>
+            table, th, td {
+                border:1px solid black;
+            }
+        </style>
+
         <div class="container">
             <h1 style="text-align: center; margin: 3%">CySA+ Tutorial</h1>
             <div class="row">
@@ -38,21 +44,14 @@
                     
                 </div>
             </div>
-            <div>
-                <h3>
-                    Infrastructure Concepts
-                </h3>
+            <div style="margin-bottom: 5%;">
+                <h3>Infrastructure Concepts</h3>
                 <p>
-                    <b>
-                        Serverless <br>
-                    </b>
+                    <b>Serverless <br></b>
                     Event - Driven Orchestration
                 </p>
                 <p>
-                    <b>
-                        Virtualization <br>
-                        
-                    </b>
+                    <b>Virtualization <br></b>
                     For virtualization you pay-as-you-go. <br>
                     It is someone else computer. We no longer have to depend on premise type of hardware. <br>
                     It, give of the scalability, resilient and fault tolerant. <br>
@@ -60,9 +59,7 @@
                     
                 </p>
                 <p>
-                    <b>
-                        Containerization
-                    </b> <br>
+                    <b>Containerization</b> <br>
                     container runs code perform processing, then destroys itself.<br>
                     Example:
                         AWS Lambda and microsoft Azure Serverless.
@@ -80,7 +77,7 @@
             </div>
 
 
-            <div>
+            <div style="margin-bottom: 5%;">
                 <h3>
                     Network Architecture 
                 </h3>
@@ -97,12 +94,12 @@
 
                 </p>
                 <p>
-                    <b>
-                        Cloud 
-                    </b> <br>
+                    <b> Cloud  </b> <br>
 
-                        The three basic claud deployment models. <br>
-                        Public: Everything is in the cloud. Are the one you can sign up free and get. Ex: GDrive, Gmail, Workspace <br>
+                        The three basic cloud deployment models. <br>
+                        Public: Everything is in the cloud. Public Cloud Are the one you can sign up free and get. Ex: GDrive, Gmail, Workspace,
+                        Amazon AWS, Microsoft Azure, Google Cloud, Linode, IBM Cloud, Oracle Cloud, etc. 
+                        <br>
                         Private: Design build and manage in house by the organization. Ex: VPC, Hyper-V, OpenStack, VCenter, ISXi <br>
                         Hybrid: Combination of both Public and Privite. is the best of both.<br>
                         <b>Cloud Technology Drives <br>
@@ -112,9 +109,7 @@
                         (Evil Twin or Rogue Access Point (AP))
                 </p>
                 <p>
-                    <b>
-                        Hybrid 
-                    </b><br>
+                    <b>Hybrid </b><br>
                         Another term is Multicloud environment. Multiple CSP (Cloud service providers).<br>
                         Hight availability! can offer, hot, warm, and cold.
                 </p>
@@ -160,79 +155,95 @@
                     Management: Were you can Monitor
                 </p>
             </div>
-            <div>
+            <div style="margin-bottom: 5%;">
                 <h3>
                     Logging
                 </h3>
                 <p>
-                    <b>
-                        Aggregation 
-                    </b> <br>
+                    <b>Aggregation </b> <br>
                     Insight of what happen whithin your environment. Pull all the logs. Associate with (SIEM) => Splunk.
                     <b>
                     (Coorelation)
                     </b>
                     Mean we putting all the logs together.
-
                 </p>
+
                 <p>
-                    <b>
-                        Time Synchronization
-                    </b> <br>
-                    <b>
-                    NTP (Network Time Protocol)
-                    </b>
+                    <b>Time Synchronization</b> <br>
+                    <b>NTP (Network Time Protocol)</b>
                     System time and reference to time source. Atomic clock or GPS.
                 </p>
                 <p>
-                    <b>
-                        Logging Levels
-                    </b> <br>
-                     It can help you sort and filter. Debugging, informative warning, Indicate Potential, problem, error serious, critical issues.<br>
-                     <b>Syslog has 8 levels</b> <br>
-                     0 = Emergency <br>
-                     1 = Alert <br>
-                     2 = Critical <br>
-                     3 = Error <br>
-                     4 = Warning <br>
-                     5 = Serious <br>
-                     6 = Information <br>
-                     7 = Debug
-                     <p>
+                    <b>Logging Levels</b> <br>
+                    It can help you sort and filter. Debugging, informative warning, Indicate Potential, problem, error serious, critical issues.<br>
+                    <b>Syslog has 8 levels</b> <br>
+                    0 = Emergency <br>
+                    1 = Alert <br>
+                    2 = Critical <br>
+                    3 = Error <br>
+                    4 = Warning <br>
+                    5 = Serious <br>
+                    6 = Information <br>
+                    7 = Debug
+                    <p>
                         There is another logging level call TRACE <br>
                         Very detailes debug information. 
-                     </p>
+                    </p>
                 </p>
             </div>
-            <div>
+            <div style="margin-bottom: 5%;">
                 <h3>
                     Operating System Concepts
                 </h3>
                 <p>
-                    <b>
-                        Windows Registry
-                    </b><br>
+                    <b>Windows Registry</b><br>
                     <b>5 Root Keys of Windows Registry</b><br>
                     1. HKey_Local_Machine or HKLM <br>
                     2. HKey_Users or HKU<br>
                     3. HKey_Current_User or HKCU <br>
                     4. HKey_CLASSES_ROOT or HKCR<br>
                     5. HKey_CURRENT_CONFIG or HKCC <br>
-                    Registry Database is Binary File = HIVE (.Log, .SAV, .ALT) => all this are save in C:\Windows\System32\Config
+                    Registry Database is Binary File = HIVE (.Log, .SAV, .ALT) => all this are save in C:\Windows\System32\Config <br>
+                    The hive file for each user profile (<b>NTUSER.DAT</b>) is stored in the folder holding the user's profile.
 
+                    <table style="width: 100%; margin: 5%;">
+                        <tr style="text-align: center; background-color: paleturquoise;">
+                            <th><b>Subkey Name</b></th>
+                            <th><b>Description</b></th>
+                        </tr>
+                        <tr>
+                            <td><b>SAM</b></td>
+                            <td>
+                                Security Accounts Manager (SAM) stores username information for accounts used on the current computer
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>SECURITY</b></td>
+                            <td>Linked to the security database of the domain the current user is logged into</td>
+                        </tr>
+                        <tr>
+                            <td><b>SOFTWARE</b></td>
+                            <td>Contains settings for software and Windows Operating System</td>
+                        </tr>
+                        <tr>
+                            <td><b>SYSTEM</b></td>
+                            <td>Contains settings for drivers and file system </td>
+                        </tr>
+                        <tr>
+                            <td><b>DEFAULT</b></td>
+                            <td>Contains settings for LocalSystem account profile</td>
+                        </tr>
+                    </table>
+                </p>
                 </p>
                 <p>
-                    <b>
-                        System Hardening
-                    </b><br>
+                    <b>System Hardening</b><br>
                     <a href="https://www.cisecurity.org/cis-benchmarks">CIS benchmarks</a><br>
 
                     Making a system go from a default configuration to make it more secure. Disabling guest user account and ports that are not in use.
                 </p>
                 <p>
-                    <b>
-                        File Structure
-                    </b>
+                    <b>File Structure</b>
                       
                     - Configuration File Location <br>
                      <b>Windows Files</b> <br>
@@ -243,45 +254,34 @@
                     System = Drivers and file system <br>
                     Default = Local System Account profile <br>
                     <b>Linux File</b><br>
-                    /etc, /usr, /log,  /var
+                    A general rule, all configuration files are contained within subdirectories of the <b>/etc</b> directory but are also often located
+                    in <b> /usr,  /opt, /var</b>
                 </p>
                 <p>
-                    <b>
-                        System Processes
-                    </b> <br>
-                    Anty Virus, defragment, user authentication, System
+                    <b>System Processes</b> <br>
+                    Anty Virus, dis, defragmentmentation, user authentication, printing, and system updates.
                 </p>
                 <p>
-                    <b>
-                        Hardware Architecture
-                    </b><br>
+                    <b>Hardware Architecture</b><br>
                     (x86 = 32 bit , x64 = 64 bit) => Are for desktop, Laptop, servers<br>
-                    ARM => SmartPhone, Tablets, or single bord architecture. <br>
-                    One cannot run on the other without of the emulater.
+                    ARM => SmartPhone, Tablets, or single-board computers like the Raspberry Pi. <br>
+                    <b>Note: </b> Software designed to run on one architecture cannot run on the other without use of the emulater.
                 </p>
             </div>
 
-            <div>
+            <div style="margin-bottom: 5%;">
                 <h3>
                     Identity and Acces Management
                 </h3>
                 <p>
-                    <b>
-                        Multi-Factor Authentication (MFA)
-                    </b><br>
+                    <b> Multi-Factor Authentication (MFA)</b><br>
                     A way to prove you say you are, by something you have, something you are, something you know.
                 </p>
                 <p>
-                    <b>
-                        Single Sign-On (SSO)
-                    </b><br>
+                    <b>Single Sign-On (SSO)</b><br>
                     Authentication process that allow a single user access to multiple systems, apps, websites. Single set of Credentials. By authenticating one time.
                 </p>
-                <p>
-                    <b>
-                        Federation
-                    </b><br>
-                    - OpenID <br>
+                <p><b>Federation</b><br>- OpenID <br>
                     - Transitive trust (if A trust B and C then trust A) <br>
                     - Shibboleth: <br>
                      Is a federated identity method, which is based on <b>SAML</b> (Secure access, markup language). It's Often used by universities, 
@@ -291,24 +291,19 @@
                      It's a different way of accomplishing the samething as OpenID process.
                 </p>
                 <p>
-                    <b>
-                        Privileged Access Management (PAM)
-                    </b><br>
+                    <b>Privileged Access Management (PAM)</b><br>
                     Refers to the use of people, application, services, processes, and technology to control, secure, monitor, and audit identities. Allow you track
                     who access what. Greater awareness and visibility into credentials used in our environment.
                 </p>
                 <p>
-                    <b>
-                        Passwordless
-                    </b><br>
+                    <b>Passwordless</b><br>
                     It's a type of the authentication method where users can access an account without entering a password. It relies on one of the other identity
                     mechanisms in multi-factor authentication. <br>
                     Here you can only use semething that you are, like biometric data, or something that you have, one time Code.
                 </p>
+
                 <p>
-                    <b>
-                        Cloud Access Security Broker (CASB)
-                    </b><br>
+                    <b>Cloud Access Security Broker (CASB)</b><br>
                     <a href="https://www.broadcom.com/products/cybersecurity/information-protection/data-loss-prevention-cloud/cloud-application-security-cloudsoc">Cloud SOC CASB</a> <br>
                     Enterprise management software that is designed to mediate access to the cloud. <br>
                     CASB can enable SSO, it can enforce access control and what to do when authenticate, scan the device. <br>
@@ -320,31 +315,29 @@
                 </p>
             </div>
 
-            <div>
+            <div style="margin-bottom: 5%;">
                 <h3> Profiling Tactics, Techniques, and procedures (TTP)</h3>
                     <a href="https://cve.mitre.org/">CVE  Mitre </a>
                 <p>
                     - Describe the actions of the adversary / group  <br>
                     - The specific activity <br>
-                        . DDoS attach / ransomware <br>
-                        . Credential harvesting / Advance Persistent Threat (APT) <br>
+                    . DDoS attach / ransomware <br>
+                    . Credential harvesting / Advance Persistent Threat (APT) <br>
 
                     <b>Indicator</b> <br>
                      - How to recognize what the actions themselves look like <br>
                      - Specific patterns 
-                        . Comand and Control (C2) infrastructure with Internet Protocol (IP) address <br>
-                        . Malware behavior <br>
-                        . Timestamps <br>
-                        . Media Access Control (MAC) addresses
+                    . Comand and Control (C2) infrastructure with Internet Protocol (IP) address <br>
+                    . Malware behavior <br>
+                    . Timestamps <br>
+                    . Media Access Control (MAC) addresses
                 </p>
             </div>
 
-            <div>
+            <div style="margin-bottom: 5%;">
                 <h3>Encryption</h3>
                 <p>
-                    <b>
-                        Public Key Infrastructure (PKI)
-                    </b><br>
+                    <b>Public Key Infrastructure (PKI) </b><br>
                     It's about public / Private Key Management, Integrity checks, Digital Signatures, Authentication, Users and Devices. <br>
                     - Non-Repudiation <br>
                     - Cryptographic Services, compliance -> Policy Regulatory, <br>
@@ -352,20 +345,154 @@
                     - When Certificate expire they need to be added to Certificate Revocation List (CRL). They are loaded into the browser. <br>
                     - Hardware Security Module (HSM) stores secrets in the hardware. <br>
                     - Digital Certificate is the foundation to stablish Hypertext transfer Protocol Secure (HTTPS).
-        
                 </p>
+
                 <p>
-                    <b>
-                        Secure Sockets Layer (SSL) Inspection
-                    </b><br>
-                        -Secure Sockets Layer Inspection (SSLI), It's the process of inspecting encrypted web traffic. <br>
-                        - SSL inspection is essential for verifying that website certificate are valid, help protecting against On Path attack 
-                        (Men In The Middle). <br>
-                        - Aceptable Use Policy (AUP)
+                    <b>Secure Sockets Layer (SSL) Inspection</b><br>
+                    -Secure Sockets Layer Inspection (SSLI), It's the process of inspecting encrypted web traffic. <br>
+                    - SSL inspection is essential for verifying that website certificate are valid, help protecting against On Path attack 
+                    (Men In The Middle). <br>
+                    - Aceptable Use Policy (AUP)
                 </p>
             </div>
 
-            <div class="row">
+            <div style="margin-bottom: 5%;">
+                <h3>Sensitive Data protection </h3>
+                <p><b>Pesonally Identifiable Information (PII)</b> <br>
+                    describes data that can be used directly or indirectly to identify an individual. It sub-categorized into different portions of sensitive PII. <br>
+                    <b>Healthcare -PHI : </b> covers a wide range of information, not only patients, but doctores, the healthcare system in general. <b>PHI</b>
+                    Protected Health Information describes data that can be used to identify an individual based on past, present, or future healthcare information.<br>
+
+                    <b>Financial -PIFI: </b> is personal, identifiable, financial information. <br>
+
+                    <b>Cardholder Data (CHD) sub-categore of PIFI</b> <br>
+                    <b>Payment Processing -CHD: </b> payment history, your credit rating, financial statements, paychecks, any kind of 
+                    onformation that a consumer provides to a financial institution in order to get something, like applying for a loan.<br>
+                    Expiration data, billing address, cvv. 
+                </p>
+            </div>
+
+            <div style="margin-bottom: 5%;">
+                <h3>Data Loss or Leak Prevention (DLP)</h3>
+                Automate the discovery and classification of data types.  first step, is discovery and then the classification of the data <br>
+                1. policy server: classification, confidentiality, privacy rules, and logs reports. <br>
+                2 Endpoint Agent - lives on a host computer. 
+                Agent Actions: Alert Only, Block, Quarentine, Tombstone (pop up message of the policy violation). <br>
+                3. Network Agent - Scan communications at Network border.
+                SSL, Print Blocking, RDP (Remote Desktop Protocol) block, Clipboard privacy control.
+                
+            </div>
+
+            <div style="margin-bottom: 5%;">
+                <h3>Identify Malicious Activity - Scenario</h3>
+                <b>Given a scenario, analyze indicators of potentially malicious activity.</b>
+                <ol>
+                    <li>XYZ Corp, a renowned e-commerce company, recently launched a new software update for their platform. Since the update, employees
+                        have reported slow network connections and accasional service interruptions. Additinally, some customers claim to have received
+                        unexpected order confirmations and there's chatter about unauthorized transactions. The CEO has received an email that appears 
+                        to be from a familiar contact, urging him to click a link and confirm his identiy due to "security concerns".<br>
+                        <b>Describe the different approaches for finding IOC's</b> <br>
+                    Answer: <b>Network- Related Activity</b>
+                    Bandwidth Consumption Beaconing "C2", Irregular Peer -to Peer Communication (P2P), Rogue Devices on the Network, Scans / Sweeps 
+                    Unusual traffic spikes, Activity on unexpected ports. <br> 
+                    <h4><a href="https://www.iana.org/">IANA  (Internet, Assigned, Numbers, Authority)</a><small> they are the ones that envented IP address </small></h4><br>
+                    <b>IP's</b><br>
+                    <b>0 - 1023 </b> well knwon <br>
+                    <b>1024 - 49151 </b> Registered <br>
+                    <b>49152 - 65,535</b> ephemeral<br>
+                    <b>Host-Related Activity</b> Processor Consuption,  Memory Consumption, Drive Capacity Consumption, Unauthorized Software, Malicious 
+                    Processes,<br>
+                    <b>Note: </b> it's important to understand how the processes function at the foundational level of a Windows, in order to recognize 
+                    abnormalities. <br>
+
+
+                    <table style="width: 100%; margin: 5%;">
+                        <tr style="text-align: center; background-color: aqua;">
+                            <th>Proceses</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><b>system.exe</b></td>
+                            <td>The windows OS kernel. Any change to that is definitely going to indicate something happening on he kernel level.</td>
+                        </tr>
+                        <tr>
+                            <td><b>smss.exe</b></td>
+                            <td>The <b>(session manager subsystem).</b> This process is a child of system.exe. It's responsible for managing sessions
+                                and monitoring critical processes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>csrss.exe</b></td>
+                            <td><b>(client-server runtime subsystem).</b> this process is started by smss.exe. It's thread creation. It provides
+                                functionality for the Windows API.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>services.exe</b></td>
+                            <td>This one is a child of <b>wininit,</b>  which is the windows initialization process. That process loads during boot.
+                                Then, sevices, managing system services
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>lsass.exe</b></td>
+                            <td><b>(local security authority subsystem service), </b> it enforces security policies and manages things like user 
+                                logons, password changes, and access tokens.
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    File system changes or anomalies, Registry changes or anomalies, Unauthorized scheduled tasks. <br>
+                    <b>Application Activity</b> Anomalous activity, Introduction of new accounts, Unexpected output, Unexpected oubound communication, 
+                    Service interruption, Application logs.<br>
+                    Social Engineering, Forensic Analysis on Email. Obfuscated Links.
+                    
+                    </li>
+                </ol>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Identifying Tasks Suitable for Automation</h3>
+                <b>Security Operation Center (SOC) teams can identify tasks suitable for automation in several ways.</b>
+                <table style="width: 100%; margin: 5%;">
+                    <tr style="text-align: center; background-color: aqua;">
+                        <th>Tasks</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><b>Analyze workflows</b></td>
+                        <td>SOC teams can analyze their workflows to identify repetitive or time-consuming tasks. Tasks that require significant 
+                            manual efforts, such as data aggregation, correlation, and analysis, are good candidates for automation.
+                        </td>
+                    </tr>
+                    <tr>
+                       <td><b>Evaluate Time-to-detection</b></td> 
+                       <td>SOC teams can evaluate how long it takes them to detect and respond to security incidents. Tasks that contribute to    
+                            delays in detection or response, such as manual data collection or analysis, are good canditates for automation.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Identify high-risk areas</b></td>
+                        <td>SOC teams can identify areas of the organization at high risk of a cyber attack. Tasks critical to these area's 
+                            security, such as threat hunting or vulnerability scanning, are good canditates for automation.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Consider the frequency of tasks</b></td>
+                        <td>SOC teams can consider how often perform specific tasks. Tasks performed frequently, such as log analysis or 
+                            malware scanning, are good candidates for automation. 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Evaluate the benefits of automation</b></td>
+                        <td>SOC teams can evaluate the benefits of automation for specific tasks, such as increased accuracy, faster response
+                            times, and reduced manual effor. Tasks that would benefit from these advantages are good candidates for automation.
+                        </td>
+                    </tr>
+                </table>
+            </div >
+            <div class="row" style="margin-bottom: 5%;">
                 <h3 style="text-align: center; margin: 3%;" >Words and meanings</h3>
                 <ol>
                     <li><h5>APT: <small>Advanced Persistent threat </small></h5></li>
@@ -375,10 +502,59 @@
                     <li><h5>TTP: <small>Tactics Techniques Procedure </small></h5></li>
                 </ol>
             </div>
-            <div class="row">
-                <h3>Links</h3>
+
+
+            
+
+            <div style="margin-bottom: 5%;">
+                <h3>Linux Commands</h3>
+                <table style="width: 100%; margin: 5%;">
+                    <tr style="text-align: center; background-color: chartreuse;">
+                        <th><b>Command</b></th>
+                        <th><b>Description</b></th>
+                    </tr>
+                    <tr>
+                        <td><b>free</b></td>
+                        <td>give you information on memory uilization. It retrieve information from the directory /proc/meminfo. The free command
+                            <b>show</b> you the total memory available amount of memory used by temporary files systems, which will be shared and 
+                            cached memory, as well as estimated memory available for new processes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>top</b></td>
+                        <td>gives you a scrollable real-time table. It gives you a table that shows you process ID. It gives you valiable info. 
+                            the memory percentage, the execution time.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>htop</b></td>
+                        <td>it's similar to top but you can use your mouse to click</td>
+                    </tr>
+                    <tr>
+                        <td><b>lsof</b></td>
+                        <td>Retrieve a list of all files that are currently <b>open</b> on an Os,it provides the processor ID for the files open 
+                            on the owner of the process, the size of the file, the network address, or the file's local address, and then its access
+                            mode.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>ps -A</b></td>
+                        <td>show all of the running process for the operating system.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row" style="margin-bottom: 5%;">
+                <h3>Links And Tools to Use</h3>
                 <div class="col">
-                    <a href="https://cve.mitre.org/">The Mitre CVE database</a>
+                    <a href="https://cve.mitre.org/">The Mitre CVE database</a> <br>
+                    <a href="https://www.maltego.com/">Maltego</a> <br>
+                    <a href="https://www.dynatrace.com/monitoring/platform/log-monitoring/">ELK stacks</a> <br>
+                    <a href="https://www.splunk.com/">Splunk</a> <br>
+                    <a href="https://www.digitalstakeout.com/">Digital Stackout</a> <br>
+                    <a href="https://www.docker.com/">Dockern Container</a> <br>
+                    <a href="https://shouldiblockit.com/"> Should I block it </a><br>
+
                 </div>
             </div>
         </div>
