@@ -492,6 +492,46 @@
                     </tr>
                 </table>
             </div >
+
+            <div style="margin-bottom: 5%;">
+                <h3> Explain Assessment Scope Considerations</h3>
+                <b>Vulnerability scanner: </b> is a type of software that scans network hosts (client and servers) and intermediate systems 
+                (routers, switchs, access points, and firewalls) for data such as patch level, security configuration and policies, network shares,
+                unused accounts, weak passwords, rogue devices, antivirus configuration, and so on. 
+                <p>
+                    <b>Noncredentialed scans</b><br>
+                    Are simple to implement, produce a relatively low impact on the device, and provide insight regarding what vulnerabilities are 
+                    discoverable to non-authenticated users, for <b>Example</b>, someone with access to the network.
+                </p>
+                <p>
+                    <b>Credentialed scans</b><br>
+                    Provide the most comprehensive evaluation of devices. By authenticating to the device, the scanner can enumerate all installed 
+                    software, the file system, configuration data, user account, and many other attributes.
+                </p>
+                <p>
+                    <b>Agentless scans</b><br>
+                    Can be the simplest to implement, as the scanner can collect information from endpoints using protocols such as ssh, WMI,, or SNMP.
+                    Some organizations do not allow the use of WMI or SNMP in response to risks associated with these protocols. Additionally, collecting
+                    data can become complicated when network firewalls are in the line of communication between the vulnerability scanner and the 
+                    endpoints.
+                </p>
+                <p>
+                    <b>Agent-based scans</b><br>
+                    Require the installation of small, special-purpose software utilities designed to collect information from the endpoint and pass it to the
+                    vulnerability scanner. <b>The advantages</b> of agent-based scanning include improved vulnerability and host configuration data, less 
+                    processing overhead on the vulnerability scanner server, and simplified communication across network firewalls.
+                </p>
+                <p>
+                    <b>Active Scanning</b><br>
+                    Directly interacting with a device or software to identify vulnerabilities. <b>Examples</b> using a vulnerability scanner, enumerating services,
+                    performing banner grabbing, content enumeration, or using a web application scanner such as Burp Suite or OWASP ZAP.
+                </p>
+                <p>
+                    <b>Passive Scanning</b><br>
+                    Describes methods used to identify vulnerabilities without direct interaction with a device or software. <b>Example: </b> Network packet 
+                    capture.
+                </p>
+            </div>
             <div class="row" style="margin-bottom: 5%;">
                 <h3 style="text-align: center; margin: 3%;" >Words and meanings</h3>
                 <ol>
