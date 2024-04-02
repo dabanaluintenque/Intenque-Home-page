@@ -16,7 +16,7 @@
         </style>
 
         <div class="container">
-            <h1 style="text-align: center; margin: 3%">CySA+ Tutorial</h1>
+            <h1 style="text-align: center; margin: 3%">CySA+ CSO-003 </h1>
             <div class="row">
                 <div class="col">
                     <h3>Security Operations Learning Objectives</h3>
@@ -445,9 +445,14 @@
                     File system changes or anomalies, Registry changes or anomalies, Unauthorized scheduled tasks. <br>
                     <b>Application Activity</b> Anomalous activity, Introduction of new accounts, Unexpected output, Unexpected oubound communication, 
                     Service interruption, Application logs.<br>
-                    Social Engineering, Forensic Analysis on Email. Obfuscated Links.
-                    
+                    Social Engineering, Forensic Analysis on Email.
                     </li>
+                    <p>
+                        <b>Obsfucated Links</b> hidding information from it's original <br>
+                        <a href="https://bitly.com/">For shorten URL</a> <br>
+                        <a href="https://t.ly/">For shorten URL</a><br>
+                        <a href="https://unshorten.me/">For unshorten URL</a> <br>
+                    </p>
                 </ol>
             </div>
 
@@ -532,19 +537,150 @@
                     capture.
                 </p>
             </div>
-            <div class="row" style="margin-bottom: 5%;">
-                <h3 style="text-align: center; margin: 3%;" >Words and meanings</h3>
-                <ol>
-                    <li><h5>APT: <small>Advanced Persistent threat </small></h5></li>
-                    <li><h5>ATT&CK: <small>Adversarial Tactics Techniques and Common Knowledge</small></h5></li>
-                    <li><h5>C2: <small>Command Control </small></h5></li>
-                    <li><h5>UEBA: <small>User Entity Behavior Analytics </small></h5></li>
-                    <li><h5>TTP: <small>Tactics Techniques Procedure </small></h5></li>
-                </ol>
+
+
+            <div>
+                <h3>Packet Capture</h3>
+                <p>
+                    <b>Wireshark:</b> GUI<br>
+                    <b>TCPDump:</b> command line<br>
+                </p>
             </div>
 
 
-            
+            <div style="margin-bottom: 5%;">
+                <h3>Log Analysis / Correlation</h3>
+                <p>
+                    Security Information and Event Management <b>SIEM</b> <br>
+                    <h5>Capabilities of SIEM</h5>
+                    <b>1 Aggregation</b> Data logs<br> 
+
+                    <b>2 Coorelation</b> Sytems recognize the same TIME<br> 
+                    <b>3 Alerting</b> Specific conditions and event types.<br>
+                    <b>4 Visibility</b> Gives an insight, dasboard, <b>Single Pane of glass.</b><br>
+                    <b>5 Compliance (GRC)</b> Producing reports<br>
+                    <b>6 Data Retention. </b> it stems from compliance, Forensic, legal hold.
+                </p>
+                <p>
+                    Security Orchestration, Automation, and Response <b>SOAR</b> runs on "Playbooks" <br> 
+                    Cost, routine repeatable- tasks, Workflow "Playbook", Checklist and actions 
+                    
+                </p>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Endpoint Security</h3>
+                <p><b>EDR</b> Endpoint Detection and Response (Laptops, Desktops, Mobile devices) <br>
+
+                    <b>Capabilities of EDR</b> <br>
+                    1. Detecting Malicious Activity <br>
+                    2. Improved Incident Response <br>
+                    3. Proactive Prevention <br>
+                    4. Risk Assessment <br>
+                    5. Malware Detection <br>
+                    6. URL Filtering <br>
+                    7. Can Help facilitaty Honeypots <br>
+                    8. Help with Monitoring <br>
+                    9. Orchestration (SOAR)
+                
+                </p>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Domain Name Service (DNS) & Internet Protocol (IP)</h3>
+                 <p><b>WHOIS:</b> is a lookup service that provide information about DNS, IP. It queries domain registry databases for,
+                    name, addresses, emails, phone numbers, any kind entity associated with DNS. <br>
+
+                    <b><a href="https://centralops.net/co/">Central Ops </a>Domain Dossier</b>
+                </p>
+                 <p>
+                    <b><a href="https://www.abuseipdb.com/">AbuseIPDB.com</a></b> it's a popular website used by analysts to investigate suspicious traffic. It provides an API. It integrates
+                    with SOAR. You can perform realtime analysis with SIEM. 
+                 </p>
+            </div>
+
+            <div style="margin-bottom: 5%;">
+                <h3>File Analysis</h3>
+                <p><b>Strings: </b> Binary, malware signatures </p>
+                <p><b><a href="https://www.virustotal.com/gui/home/url">VirusTotal: </a></b> Free open source service that inspects files. You can drop anything into it. URLs, files, anti-malware 
+                    scanner. It also perform domain block listing services.
+                </p>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Sandboxing </h3> 
+                It's a malware analysis. It can inspect executable files. It can look through suspicious URLs and other
+                    features.
+                <p>
+                    <b><a href="https://www.joesandbox.com/#mac">Joe Sandbox </a></b>
+                </p>
+                <p><b><a href="https://cuckoo.cert.ee/"> Cuckoo Sandbox</a></b></p>
+                <p><b><a href="https://hybrid-analysis.com/"> Crowdstrike hybrid - analysis</a></b></p>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Common Techniques Use to identify malicious activities</h3>
+                <p><b>Pattern Recognition: </b> Unexpected spikes in the network activity, Cammand and Control (c2),
+                    odd hours, locations. suspicious services being use. 
+                </p>
+                <p><b>Interpreting Suspicious commands: </b> in unix environment, Living Off Land (LOL)  these commands are usually
+                    located directly on the system. They don't have to be implement or install.
+                </p>
+                <p><b>File Analysis: </b> Hashing</p>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3> Email Analysis</h3>
+                <p><b>Header</b> Are frequently exploited because there are three different sender address fields. <br>
+                    1. Display From (RFC 5322.from)=> It's the sender email address. <br>
+                    2. Envelope From (RFC 5321 )=> I'ts a return address. <br>
+                    3. Received From / By => A list of all serves and the transits authority, or (MTAS), that process the email.
+                
+                </p>
+                <p><b>Impersonation</b></p>
+                
+                <p><b>Embedded Links</b> shorten urls</p>
+            </div>
+
+            <div style="margin-bottom: 5%;">
+                <h3>Email Analysis and Protection</h3>
+                <p><b>Domain Keys Identified Mail (DKIM): </b> Public / Private Keys, Digital Signatures verify domain users.</p>
+                <p><b>Domain-based Message Authentication, Reporting, and Conformance (DMARC): </b> Policy Driven Control. The control over the email
+                    it's either going to (flag (~all), Quarantine, Drop, or Deliver, Reject (-all), Accept (+all))
+                </p>
+                <p><b>Sender Policy Frameworks (SPF): </b> List of all valid internal and trusted email addresses.</p>
+            </div>
+
+            <div style="margin-bottom: 5%;"> 
+                <h3>User Behavior Analysis</h3>
+                <p><b>User Entity Behavior Analytics (UEBA): </b> It's a tool. Integrated with SIEM and SOAR. 
+                </p>
+                <p><b>Abnormal Account Activity: </b> Evidence of communication with known malicious IP's and domains. <br>
+                    Encrypted communication between a device and host every 2 mins. <br>
+                    Abnormal traffic size "GB's at DNS". <br>
+                    Pats associated with C&C.
+                </p>
+                <p><b>Impossible Travel: </b></p>
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Programming Languages</h3>
+                <p>JavaScript Object Natation (JSON)</p>
+                <p>Extensible Markup Language (XML)</p>
+                <p>Paython</p>
+                <p>Shell Script</p>
+                <p>Regular Expressions</p>
+            </div>
+
+
+
+
 
             <div style="margin-bottom: 5%;">
                 <h3>Linux Commands</h3>
@@ -581,8 +717,81 @@
                         <td><b>ps -A</b></td>
                         <td>show all of the running process for the operating system.</td>
                     </tr>
+                    <tr>
+                        <td><b>tcpdump -n</b></td>
+                        <td>show addresses</td>
+                    </tr>
+                    <tr>
+                        <td><b>tcpdump -e</b></td>
+                        <td>Ethernet Header</td>
+                    </tr>
+                    <tr>
+                        <td><b>tcpdump -v, -vv, -vvv</b></td>
+                        <td>Verbosity</td>
+                    </tr>
+                    <tr>
+                        <td><b>tcpdump -w</b></td>
+                        <td>Write to a file</td>
+                    </tr>
+                    <tr>
+                        <td><b>tcpdump -r</b></td>
+                        <td>display packet capture file</td>
+                    </tr>
+                    <tr>
+                        <td><b>echo $SHELL</b></td>
+                        <td>Tels you what shell you are using.</td>
+                    </tr>
+                    <tr>
+                        <td><b>ps -p $$</b></td>
+                        <td>That will tell you the process ID of your current session, and current shell</td>
+                    </tr>
+                    <tr>
+                        <td><b>cat /etc/shells</b></td>
+                        <td>shows the contents of all the shells on the system</td>
+                    </tr>
+                    <tr>
+                        <td><b>chsh -s /usr/bin/bash</b></td>
+                        <td>change permanently the shell that you're currently in.</td>
+                    </tr>
+                    <tr>
+                        <td><b>rmdir</b></td>
+                        <td>Remove directore</td>
+                    </tr>
+                    <tr>
+                        <td><b>mv</b></td>
+                        <td>move a file</td>
+                    </tr>
+                    <tr>
+                        <td><b>cp</b></td>
+                        <td>to copy</td>
+                    </tr>
+                    <tr>
+                        <td><b>locate</b></td>
+                        <td>to locate a file</td>
+                    </tr>
+                    <tr>
+                        <td><b>find</b></td>
+                        <td>find a file</td>
+                    </tr>
+                    <tr>
+                        <td><b>chmod </b></td>
+                        <td>Change the file permission</td>
+                    </tr>
                 </table>
             </div>
+
+
+            <div class="row" style="margin-bottom: 5%;">
+                <h3 style="text-align: center; margin: 3%;" >Words and meanings</h3>
+                <ol>
+                    <li><h5>APT: <small>Advanced Persistent threat </small></h5></li>
+                    <li><h5>ATT&CK: <small>Adversarial Tactics Techniques and Common Knowledge</small></h5></li>
+                    <li><h5>C2: <small>Command Control </small></h5></li>
+                    <li><h5>UEBA: <small>User Entity Behavior Analytics </small></h5></li>
+                    <li><h5>TTP: <small>Tactics Techniques Procedure </small></h5></li>
+                </ol>
+            </div>
+
 
             <div class="row" style="margin-bottom: 5%;">
                 <h3>Links And Tools to Use</h3>
