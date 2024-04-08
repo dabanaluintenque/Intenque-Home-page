@@ -137,6 +137,12 @@ let day102 = timeTracker(19,54,21,2);
 let day103 = timeTracker(20,20,21,38);
 let day104 = timeTracker(8,20,17,20);
 let day105 = timeTracker(3,41,18,0);
+let day106 = timeTracker(20,27, 21,57);
+let day107 = timeTracker(7,0,10,0);
+let day108 = timeTracker(18,4,21,56);
+let day109 = timeTracker(19,49, 21,13);
+let day110 = timeTracker(8,40, 14,30);
+let day111 = timeTracker(15,40, 16,40);
 
 let number_of_days =[];
 number_of_days.push(day1);
@@ -247,6 +253,12 @@ number_of_days.push(day102);
 number_of_days.push(day103);
 number_of_days.push(day104);
 number_of_days.push(day105);
+number_of_days.push(day106);
+number_of_days.push(day107);
+number_of_days.push(day108);
+number_of_days.push(day109);
+number_of_days.push(day110);
+number_of_days.push(day111);
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
@@ -356,6 +368,12 @@ const day102Time = document.getElementById('day102').innerHTML = convert_to_time
 const day103Time = document.getElementById('day103').innerHTML = convert_to_time_format(number_of_days[105]);
 const day104Time = document.getElementById('day104').innerHTML = convert_to_time_format(number_of_days[106]);
 const day105Time = document.getElementById('day105').innerHTML = convert_to_time_format(number_of_days[107]);
+const day106Time = document.getElementById('day106').innerHTML = convert_to_time_format(number_of_days[108]);
+const day107Time = document.getElementById('day107').innerHTML = convert_to_time_format(number_of_days[109]);
+const day108Time = document.getElementById('day108').innerHTML = convert_to_time_format(number_of_days[110]);
+const day109Time = document.getElementById('day109').innerHTML = convert_to_time_format(number_of_days[111]);
+const day110Time = document.getElementById('day110').innerHTML = convert_to_time_format(number_of_days[112]);
+const day111Time = document.getElementById('day111').innerHTML = convert_to_time_format(number_of_days[113]);
 
 function totalHoursInStudy(){
     

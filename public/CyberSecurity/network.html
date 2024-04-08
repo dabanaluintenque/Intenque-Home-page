@@ -19,7 +19,7 @@
         <div style="margin-bottom: 5%;">
             <p>
                 <b>What is a Networ?</b> <br>
-                A network is a me dium to provide communication betwee systems.
+                A network is a medium to provide communication between systems.
             </p>  
             <p>
                 <b>Nodes</b> <br>
@@ -93,7 +93,7 @@
             </div>
             
         </div>
-        <div>
+        <div style="margin-bottom: 5%;">
             <h3>Network Data Transmission</h3>
             <p><b>Copper Cable</b><br>
                 Copper Cable is used to transmit electrical signals. The cable between two nodes creates a low voltage electrical circui betwwen the interfaces on the nodes.
@@ -108,7 +108,7 @@
                 MMF is categorized by Optical Mode designations (OM1, OM2, OM3, and OM4).
             </p>
         </div>
-        <div>
+        <div style="margin-bottom: 5%;">
             <h3>Ethernet Standards / Media Access Control and Collision domains</h3>
              <b>Ethernet</b> is a multiple access area network, which means that the available communications capacity is shared betwwen 
              the nodes that are connected to the same media. <br>
@@ -122,16 +122,114 @@
              <b>In the 10BASE-T wiring topology</b> each node is cabled to an Ethernet hub. The 10BASE-T standard dates from 1990.
         </div>
         
-        <div>
+        <div style="margin-bottom: 5%;">
             <h3>100BASE-TX Fast Ethernet Standard</h3>
             <b>The Fast Ethernet standard users the </b> The same CSMA/CD protocol as 10BASE-T. <br>
             100BASE-TX refers to Fast ethernet working over Cat 5 ( or better) twisted pair copper cable with a maximum 
             supported link lenght of 100 meters (328 feet).
         </div>
+
+        <div style="margin-bottom: 5%;">
+            
+            <h3>Ports</h3>
+            <table style="width: 100%">
+                <tr style="background-color:darkkhaki">
+                    <td>Port Number</td>
+                    <td>Port Tansport Protocol</td>
+                    <td>Port Name</td>
+                    <td>Port Description</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>TCP</td>
+                    <td>ftp-data</td>
+                    <td>File Transfer Protocol Data</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>TCP</td>
+                    <td>FTP</td>
+                    <td>File Transfer Protocol - Control</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>TCP</td>
+                    <td>SSH / SFTP</td>
+                    <td>Secure Shell</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>TCP</td>
+                    <td>TELNET</td>
+                    <td>Telnet</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>TCP</td>
+                    <td>SMTP</td>
+                    <td>Simple Mail Transfer Protocol</td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>TCP / UDP</td>
+                    <td>DNS</td>
+                    <td>Domain Name System</td>
+                </tr>
+                <tr>
+                    <td>80</td>
+                    <td>TCP</td>
+                    <td>HTTP</td>
+                    <td>Heypertext Transfer Protocol</td>
+                </tr>
+                <tr>
+                    <td>110</td>
+                    <td>TCP</td>
+                    <td>POP</td>
+                    <td>Post Office Protocol</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>UDP</td>
+                    <td>NTP</td>
+                    <td>Network Time Protocol</td>
+                </tr>
+                <tr>
+                    <td>143</td>
+                    <td>TCP</td>
+                    <td>IMAP</td>
+                    <td>Internet Message Access Protocol</td>
+                </tr>
+                <tr>
+                    <td>161 / 162 </td>
+                    <td>UDP</td>
+                    <td>SNMP</td>
+                    <td>Simple Network Management Protocol</td>
+                </tr>
+                <tr>
+                    <td>389</td>
+                    <td>TCP / UDP</td>
+                    <td>LDAP</td>
+                    <td>Lightweight Directory Access Protocol</td>
+                </tr>
+                <tr>
+                    <td>443</td>
+                    <td>TCP</td>
+                    <td>HTTPS</td>
+                    <td>Heypertext Transfer Protocol Secure</td>
+                </tr>
+                <tr>
+                    <td>3389</td>
+                    <td>TCP</td>
+                    <td>RDP</td>
+                    <td>Remote Desktop Protocol</td>
+                </tr>
+            </table>
+
+        </div>
         <div>
             <h3>Linux Command</h3>
             <table style="width: 100%;">
-                <tr style="background-color: aqua;">
+                <tr style="background-color: green;">
                     <th>Commands</th>
                     <th>Description</th>
                 </tr>
@@ -150,6 +248,42 @@
                 <tr>
                     <td><b>ifconfig</b></td>
                     <td>dispaly Ip address information</td>
+                </tr>
+                <tr>
+                    <td><b>nmap 10.1.16.12 > myScannerFile.txt</b></td>
+                    <td>Scan the target with the 10.1.16.12 IP address and save it in myScannerFile.txt</td>
+                </tr>
+                <tr>
+                    <td><b>sudo tcpdump -i eth0 -vv dst 10.1.16.12 and port http -w http.txt</b></td>
+                    <td>Start Capturing a file on the server 10.1.16.12 on the port 80 and write it in http.txt file</td>
+                </tr>
+                <tr>
+                    <td><b>sudo tcpdump -r http.txt</b></td>
+                    <td>Display the http.txt file contents.</td>
+                </tr>
+                <tr>
+                    <td><b> sudo tcpdump -r http.txt | grep -i seq</b></td>
+                    <td>Will filtered only <b>seq</b> messages. You can try the same for <b>ack</b></td>
+                </tr>
+                <tr>
+                    <td><b>wireshark</b></td>
+                    <td>Launch the Wireshark application</td>
+                </tr>
+                <tr>
+                    <td><b>sudo tcpdump -i eth0 -vv dst 10.1.16.12 and port ssh -w ssh.txt</b></td>
+                    <td>Begin Capturing ssh traffic and save it in ssh.txt</td>
+                </tr>
+                <tr>
+                    <td><b>sudo tcpdump -i eth0 -vv icmp -w ping.txt</b></td>
+                    <td>icmp packet capture</td>
+                </tr>
+                <tr>
+                    <td><b>whomai</b></td>
+                    <td>confirm your identity</td>
+                </tr>
+                <tr>
+                    <td><b>hostname</b></td>
+                    <td>confirm the identity of the remote server you are connected to.</td>
                 </tr>
             </table>
 
