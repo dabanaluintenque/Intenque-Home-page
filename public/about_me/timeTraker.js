@@ -143,6 +143,10 @@ let day108 = timeTracker(18,4,21,56);
 let day109 = timeTracker(19,49, 21,13);
 let day110 = timeTracker(8,40, 14,30);
 let day111 = timeTracker(15,40, 16,40);
+let day112 = timeTracker(20,2,21,17);
+let day113 = timeTracker(8,30, 14,30);
+let day114 = timeTracker(13,11,20,0);
+
 
 let number_of_days =[];
 number_of_days.push(day1);
@@ -259,6 +263,9 @@ number_of_days.push(day108);
 number_of_days.push(day109);
 number_of_days.push(day110);
 number_of_days.push(day111);
+number_of_days.push(day112);
+number_of_days.push(day113);
+number_of_days.push(day114);
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
@@ -374,6 +381,12 @@ const day108Time = document.getElementById('day108').innerHTML = convert_to_time
 const day109Time = document.getElementById('day109').innerHTML = convert_to_time_format(number_of_days[111]);
 const day110Time = document.getElementById('day110').innerHTML = convert_to_time_format(number_of_days[112]);
 const day111Time = document.getElementById('day111').innerHTML = convert_to_time_format(number_of_days[113]);
+const day112Time = document.getElementById('day112').innerHTML = convert_to_time_format(number_of_days[114]);
+const day113Time = document.getElementById('day113').innerHTML = convert_to_time_format(number_of_days[115]);
+const day114Time = document.getElementById('day114').innerHTML = convert_to_time_format(number_of_days[116]);
+
+
+
 
 function totalHoursInStudy(){
     
@@ -386,4 +399,3 @@ function totalHoursInStudy(){
 
 let total_time = convert_to_time_format(totalHoursInStudy());
 const totaStudyHours = document.getElementById('studytime').innerHTML = total_time;
-

@@ -404,6 +404,7 @@
                     Processes,<br>
                     <b>Note: </b> it's important to understand how the processes function at the foundational level of a Windows, in order to recognize 
                     abnormalities. <br>
+                    <p><a href="https://www.speedguide.net/ports.php?"><b>Ports Database</b></a></p>
 
 
                     <table style="width: 100%; margin: 5%;">
@@ -413,7 +414,7 @@
                         </tr>
                         <tr>
                             <td><b>system.exe</b></td>
-                            <td>The windows OS kernel. Any change to that is definitely going to indicate something happening on he kernel level.</td>
+                            <td>The windows OS kernel. Any change to that is definitely going to indicate something happening on he kernel level. Always has a process identifier of 4.</td>
                         </tr>
                         <tr>
                             <td><b>smss.exe</b></td>
@@ -426,6 +427,10 @@
                             <td><b>(client-server runtime subsystem).</b> this process is started by smss.exe. It's thread creation. It provides
                                 functionality for the Windows API.
                             </td>
+                        </tr>
+                        <tr>
+                            <td><b>wininit.exe</b></td>
+                            <td><b>Windows Initialization Process</b> This process loads during boot and is primarily responsible for starting other processes.</td>
                         </tr>
                         <tr>
                             <td><b>services.exe</b></td>
@@ -452,6 +457,7 @@
                         <a href="https://bitly.com/">For shorten URL</a> <br>
                         <a href="https://t.ly/">For shorten URL</a><br>
                         <a href="https://unshorten.me/">For unshorten URL</a> <br>
+                       
                     </p>
                 </ol>
             </div>
@@ -563,7 +569,15 @@
                 </p>
                 <p>
                     Security Orchestration, Automation, and Response <b>SOAR</b> runs on "Playbooks" <br> 
-                    Cost, routine repeatable- tasks, Workflow "Playbook", Checklist and actions 
+                    Cost, routine repeatable- tasks, Workflow "Playbook", Checklist and actions  <br>
+                    <h3>SOAR runbook to analyze email</h3>
+                    <ol>
+                        <b><li></li></b>Checks a file for malware and then "detonates" it in a sandbox (if required) to further analysis its purpose.
+                        <b><li></li></b> Analyzes the domain information contained in the email, by submitting the domain, the URL used in the message, 
+                        and information gathered from <b>whois</b> databases, to identify if the content is safe or malicious.
+                        <b><li></li></b> Focuses on the IP address information contained in the message.
+                    </ol>
+                    <img style="width: 100%; height: 30%;" src="./cyber_images/SOAR_phishing_Runbook.png" alt="SOAR Phishing Runbook">
                     
                 </p>
             </div>
@@ -687,14 +701,129 @@
 
 
 
+            <div style="margin-bottom: 5%;">
+                <h3>Explore Kill Chain Concepts</h3>
+                
+                <ol>
+                    <b><li>Reconnaissance</li></b> The attacker discovers what they can about the target and the technoloies in place. This phase may use passive information gathering and active scanning
+                    of target network. This phase's desired outcome will be identifying one or more potential exploitable.
+
+                    <b><li>Weaponization</li></b> The attacher identifies a method by which identified vulnerabilities can be exploited, often through "weaponized code, " such as carefully crafted scripts,
+                    custom malware binaries, compromised websites, sucial engineering, and other methods.
+                    
+                    <b><li>Delivery</li></b> the attacker identifies a vector to transmit the weaponized code to the target environment, such as via an email attachment or on a USB drive.
+
+                    <b><li>Exploitation</li></b> This results in the weaponized code running on the target system. For example, a phishing email may trick the user into running the code, while a drive-by 
+                    download would execute on vulnerable system without user intervention.
+
+                    <b><li>Installation</li></b> This mechanism enables the weaponized code to run a remote access tool and achieve persistence on the target system.
+
+                    <b><li>Command and Control (C&C or C2)</li></b> The weaponized code establishes a reliable channel to a remote server used to manage the session and often downloads additional tools to 
+                    help advance the attack.
+
+                    <b><li>Actions on Objectives</li></b> In this phase, the attacker typically uses the access they have achieved to covertly collect information from the target systems and transfer it to 
+                    reomote system (data exfiltration). An attacker may have other goals or motives, however.
+                </ol>
+
+                <img style="width: 100%;" src="./cyber_images/Explore_Kill_Chain_concepts.png" alt="Lockheed Martin Kill Chain">
+            </div>
 
 
             <div style="margin-bottom: 5%;">
+                <h3>Threat Actors</h3>
+                <p>
+                    <b>Advanced Persistent Threat (APT)</b> <br>
+                    Can be spy governanment agencies. With their unique number and identifiers
+                </p>
+                <p>
+                    <b>Nation-State</b><br>
+                    Governanment Sponsored. Represented by a lot of capital. Use advanced technology and tools.
+                </p>
+                <p>
+                    <b>Organized Crime</b> <br>
+                    Motivated by criminal profit. Achieve this by blackmail, fraud.
+                </p>
+                <p>
+                    <b>Hacktivists</b> <br>
+                    Advocace Groups like Anonymous, Wikileaks. Perfornm DOS attack to deface website. 
+                </p>
+                <p>
+                    <b>Script Kiddie</b> <br>
+                    Anyone that is using hacker tool by default as they come. They are most likely to get caught.
+                </p>
+                <p>
+                    <b>Supply Chain</b> <br>
+                    It's more about the access. They could be targeted by Nation-State or Organized Crime.
+                </p>
+                <p>
+                    <b>Insider Threat</b>
+                    Intentional or Unintentional
+                </p>
+            </div>
+
+            <div style="margin-bottom: 5%;">
+
+                <h3>Social Engineering Vulnerabilities</h3>
+                <p>
+                    <b>Pretexting</b> <br>
+                    The attacker creates a false story or scenario to decive the victim. <b>Example: </b> An attacker might phone an employee and pretend to be someone from the IT department, 
+                    asking for the their username and password to help solve an urgent problem.
+                </p>
+
+                <p>
+                    <b>Baiting</b> <br>
+                    The attacker uses a promise or reward to lure the victim into sharing personal or confidential information, like a password. <b>Example: </b> An attacker often leaves a USB drive in a 
+                    conspicuous location to tempt someone to connect it to their computer. <b>Another Example: </b> Is to create a file with a name like "executive bonuses" or "Staff layoff plans." Once 
+                    opened, the file contains macro code designed to exploit the computer.
+                </p>
+            
+            </div>
+
+
+            <div style="margin-bottom: 5%;">
+                <h3>Open Source</h3>
+                <ol>
+                    <li>Social Media</li>
+                    <li>Blogs / forums</li>
+                    <li>Government Bulletins</li> DOD, DHS, CISA
+                    <li>Computer emergency Response Team <b>(CERT)</b></li> Incident Response for Low enforcement federal agencies Natural disasters, Terrorist attacks.
+                    <li>Cybersecurity Incident Response Team <b>(CSIRT)</b></li> Incident Response for computer Systems. For organizations
+                </ol>
+            </div>
+
+           
+           
+           
+           
+           
+           
+           
+           
+           
+        
+           
+            <div style="margin-bottom: 5%;">
                 <h3>Linux Commands</h3>
-                <table style="width: 100%; margin: 5%;">
+                <table style="width: 100%;">
                     <tr style="text-align: center; background-color: chartreuse;">
                         <th><b>Command</b></th>
                         <th><b>Description</b></th>
+                    </tr>
+                    <tr>
+                        <td><b>Cat</b></td>
+                        <td>Display the content of a file.</td>
+                    </tr>
+                    <tr>
+                        <td><b>tail</b></td>
+                        <td>Display the last 10 lines of a file.</td>
+                    </tr>
+                    <tr>
+                        <td><b>head</b></td>
+                        <td>Display the first 10 lines of a file.</td>
+                    </tr>
+                    <tr>
+                        <td><b>touch</b></td>
+                        <td>Create an empty file.</td>
                     </tr>
                     <tr>
                         <td><b>free</b></td>
@@ -765,6 +894,10 @@
                         <td>Remove directore</td>
                     </tr>
                     <tr>
+                        <td><b>rm</b></td>
+                        <td>Remove a file or directory</td>
+                    </tr>
+                    <tr>
                         <td><b>mv</b></td>
                         <td>move a file</td>
                     </tr>
@@ -781,8 +914,103 @@
                         <td>find a file</td>
                     </tr>
                     <tr>
+                        <td><b>wget</b></td>
+                        <td>Simple command to retrieve content from an HTTP server</td>
+                    </tr>
+                    <tr>
+                        <td><b>curl</b></td>
+                        <td>Similar to wget but includes more sophisticated options.</td>
+                    </tr>
+                    <tr>
                         <td><b>chmod </b></td>
-                        <td>Change the file permission</td>
+                        <td>Determines who is allowed to make what changes to a particular file or folder.</td>
+                    </tr>
+                    <tr>
+                        <td><b>chown</b></td>
+                        <td>Determines who owns a particular file or folder.</td>
+                    </tr>
+                    <tr>
+                        <td><b>arp - a > arp.txt</b></td>
+                        <td>Used to manually inspect the local machine's ARP cache and save it in <b>arp.txt</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>nmap 10.1.0.1 -A</b></td>
+                        <td>Use to enable OS fingerprinting and version discovery.</td>
+                    </tr>
+                    <tr>
+                        <td><b>nmap -sV 192.168.10.252</b></td>
+                        <td>Goes through all of the different ports on this system</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>vi / vim</b></td>
+                        <td>A file editor for use in a terminal.</td>
+                    </tr>
+                    <tr>
+                        <td><b>su</b></td>
+                        <td>Substitute or switch user</td>
+                    </tr>
+                    <tr>
+                        <td><b>sudo</b></td>
+                        <td>Precedes a command that requires elevated previleges.</td>
+                    </tr>
+                    <tr>
+                        <td><b>useradd</b></td>
+                        <td>Create a user account</td>
+                    </tr>
+                    <tr>
+                        <td><b>usermod</b></td>
+                        <td>Change the attributes of a user account.</td>
+                    </tr>
+                    <tr>
+                        <td><b>mkfifo</b></td>
+                        <td>Similar in concept to a satndard | style pipe but implemented as an actual file.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="margin-bottom: 5%;">
+                <h3>Windows Commands</h3>
+                <table style="width: 100%;">
+                    <tr style="text-align: center; background-color:chartreuse;">
+                        <th><b>Command</b></th>
+                        <th><b>Description</b></th>
+                    </tr>
+                    <tr>
+                        <td><b>netstat</b></td>
+                        <td>Used to display network activity, in <b>particular active IP address</b> and <b>ports</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>ping</b></td>
+                        <td>Used to test connectivity among network diveces, can also be abused to carry data.</td>
+                    </tr>
+                    <tr>
+                        <td><b>ipconfig</b></td>
+                        <td>Used to display IP address configuration information.</td>
+                    </tr>
+                    <tr>
+                        <td><b>nslookup</b></td>
+                        <td>Used to interact with <b>DNS</b> using the command line.</td>
+                    </tr>
+                    <tr>
+                        <td><b>tasklist</b></td>
+                        <td>Used to display the processes running on a system.</td>
+                    </tr>
+                    <tr>
+                        <td><b>net &lt; option &gt;</b></td>
+                        <td>The net command is used to perform many admninistrative tasks.</td>
+                    </tr>
+                    <tr>
+                        <td><b>netsh</b></td>
+                        <td>Allows local and remote configuration of network-related services.</td>
+                    </tr>
+                    <tr>
+                        <td><b>wmic</b></td>
+                        <td>A command line interface to Windows Management Instrumentation (WMI). </td>
+                    </tr>
+                    <tr>
+                        <td><b>arp -a</b></td>
+                        <td>Used to manually inspect the local machine's ARP cache and verify that unique MAC address values are associated with each dynamic entry in the table.</td>
                     </tr>
                 </table>
             </div>
@@ -810,6 +1038,7 @@
                     <a href="https://www.digitalstakeout.com/">Digital Stackout</a> <br>
                     <a href="https://www.docker.com/">Dockern Container</a> <br>
                     <a href="https://shouldiblockit.com/"> Should I block it </a><br>
+                    <a href="https://regexpattern.com/credit-card-number/">Regular expresion for Credit Cards</a>
 
                 </div>
             </div>
