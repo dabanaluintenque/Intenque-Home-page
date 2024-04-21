@@ -146,6 +146,8 @@ let day111 = timeTracker(15,40, 16,40);
 let day112 = timeTracker(20,2,21,17);
 let day113 = timeTracker(8,30, 14,30);
 let day114 = timeTracker(13,11,20,0);
+let day115 = timeTracker(8,30, 14,30);
+let day116 = timeTracker(10,56, 19,19);
 
 
 let number_of_days =[];
@@ -266,6 +268,8 @@ number_of_days.push(day111);
 number_of_days.push(day112);
 number_of_days.push(day113);
 number_of_days.push(day114);
+number_of_days.push(day115);
+number_of_days.push(day116);
 
 const day1Time = document.getElementById('day1').innerHTML = convert_to_time_format(number_of_days[0]);
 const day2Time = document.getElementById('day2').innerHTML = convert_to_time_format(number_of_days[1]);
